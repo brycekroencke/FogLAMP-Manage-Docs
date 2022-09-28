@@ -24,8 +24,7 @@ will put the FogLAMP into a fail-safe state, wipe the configuration, and
 restore it with the configuration as shown in the FogLAMP Manage
 version. This is useful if a FogLAMP fails to configure for any reason.
 
-..
-  |image3|
+.. image:: images/version-control/image-1.jpg
 
 Within the Version Control page, the following information is available
 per version:
@@ -67,8 +66,7 @@ To begin creating a new version, navigate to the Version Control page
 and click the **Add New Version** button. The form pictured below will
 appear.
 
-..
-  |image4|
+.. image:: images/version-control/image-2.png
 
 Provide the field *Name* with a version number, in the format of
 MAJOR.MINOR.PATCH. For more information on how to properly determine the
@@ -90,14 +88,12 @@ a garbage icon will appear. Clicking this will open a prompt confirming
 the deletion of the version. Once a version is deleted, it can not be
 recovered.
 
-..
-  |image5|
+.. image:: images/version-control/image-3.png
 
 Version Control Logs
 ~~~~~~~~~~~~~~~~~~~~
 
-..
-  |image6|
+.. image:: images/version-control/image-4.jpg
 
 To reveal the logs, click the + button to the left of the desired
 version.
@@ -131,5 +127,4 @@ the FogLAMP that you would like to redeploy to, this will open up that
 specific FogLAMP’s configuration page. Click the ⋮ button at the top
 right and select redeploy from the menu.
 
-..
-  |image7|
+.. image:: images/version-control/image-5.png
