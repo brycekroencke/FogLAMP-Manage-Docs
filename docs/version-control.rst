@@ -25,6 +25,7 @@ restore it with the configuration as shown in the FogLAMP Manage
 version. This is useful if a FogLAMP fails to configure for any reason.
 
 .. image:: images/version-control/image-1.jpg
+  :width: 400
 
 Within the Version Control page, the following information is available
 per version:
@@ -67,6 +68,7 @@ and click the **Add New Version** button. The form pictured below will
 appear.
 
 .. image:: images/version-control/image-2.png
+  :width: 400
 
 Provide the field *Name* with a version number, in the format of
 MAJOR.MINOR.PATCH. For more information on how to properly determine the
@@ -89,11 +91,13 @@ the deletion of the version. Once a version is deleted, it can not be
 recovered.
 
 .. image:: images/version-control/image-3.png
+  :width: 400
 
 Version Control Logs
 ~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/version-control/image-4.jpg
+  :width: 400
 
 To reveal the logs, click the + button to the left of the desired
 version.
@@ -128,3 +132,4 @@ specific FogLAMP’s configuration page. Click the ⋮ button at the top
 right and select redeploy from the menu.
 
 .. image:: images/version-control/image-5.png
+  :width: 400

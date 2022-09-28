@@ -13,9 +13,6 @@ integrations.
 
 The sections below go over each component of a Data Flow in detail.
 
-..
-  |image8|
-
 Assets
 ------
 
@@ -34,9 +31,6 @@ real world physical assets\ *.* An *Asset* is not a mandatory component
 of a Data Flow; however, they allow for real world use cases to be
 modeled digitally in an abstract manner. By creating an *Asset*, your
 Data Flow will be more human interpretable and easier to organize.
-
-..
-  |image9|
 
 How to add an Asset Using the GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,8 +51,8 @@ paths that can be taken to initiate the process of creating an Asset.
 After completing either of the above methods, the following form will be
 presented.
 
-..
-  |image10|
+.. image:: images/data-flows/image-5.png
+  :width: 800
 
 Expand the **Choose Template** dropdown and select the Template which
 corresponds to the Asset being created. If the desired Template does not
@@ -79,8 +73,8 @@ Templates <#connection-type-templates>`__ and
 `Connections <#connections>`__ for information about advanced Connection
 configurations.
 
-..
-  |image11|
+.. image:: images/data-flows/image-6.png
+  :width: 800
 
 Data Sources
 ------------
@@ -97,9 +91,6 @@ include sensors, DAQs, PLCs, REST servers, and MQTT brokers.
 Within FogLAMP Manage Data Flows, Data Source entities are used to model
 the physical data sources. Data Sources are typically used to produce
 data pertaining to your Assets.
-
-..
-  |image12|
 
 How to add a Data Source
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,9 +111,8 @@ Source.
 
 After completing either of the above methods, the following form will be
 presented.
-
-..
-  |image13|
+.. image:: images/data-flows/image-7.png
+  :width: 800
 
 Provide a meaningful name for the Data Source. Next expand the **Choose
 Template** dropdown and select the Template which corresponds to the
@@ -142,8 +132,8 @@ sections `Connection Templates <#connection-type-templates>`__ and
 `Connections <#connections>`__ for information about advanced Connection
 configurations.
 
-..
-  |image14|
+.. image:: images/data-flows/image-8.png
+  :width: 800
 
 Integrations
 ------------
@@ -161,9 +151,6 @@ hosted on premise or in a cloud environment. FogLAMP Manage has
 Integrations for all major cloud providers and all major outbound
 protocols. Some commonly used Integrations include PI OMF, GCP, MQTT,
 and OPCUA.
-
-..
-  |image15|
 
 How to add an Integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,8 +177,8 @@ Filters are entities that can be attached to Data Flows to perform
 additional processing on data in-flight. Filters can transform readings,
 add/subtract readings, and enrich readings with metadata. Several
 Filters can be applied to an entity in succession to form a Filter
-pipeline. Filters can be as simple as converting Farenheit data to
-Celsicus or Filters can be more complex such as running ML inference on
+pipeline. Filters can be as simple as converting Fahrenheit data to
+Celsius or Filters can be more complex such as running ML inference on
 the data stream.
 
 Ad Hoc Filters
@@ -304,8 +291,8 @@ physical assets, enabling the user to see which Data Sources are
 monitored for a given Asset, which FogLAMP(s) process that Asset’s data,
 and which Integrations they deliver it to.
 
-..
-  |image16|
+.. image:: images/data-flows/image-1.png
+  :width: 800
 
 Grouped and Sorted by Data Sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -315,8 +302,8 @@ are processed by your system. For each Data Source, you can see the
 Asset(s) it comes from, the FogLAMP(s) that process it, and the
 Integrations the data is delivered to.
 
-..
-  |image17|
+.. image:: images/data-flows/image-1.png
+  :width: 800
 
 Grouped and Sorted by FogLAMPs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -326,8 +313,8 @@ processing your IIoT data. For each FogLAMP, you can see the Asset(s)
 and Data Sources they are monitoring and the Integrations the data is
 delivered to.
 
-..
-  |image18|
+.. image:: images/data-flows/image-1.png
+  :width: 800
 
 
 Grouped and Sorted by Integrations
@@ -338,5 +325,5 @@ data in your system. For each Integration, you can see the Asset(s) and
 Data Source(s) that are monitored and the FogLAMP(s) that process the
 monitored data.
 
-..
-  |image19|
+.. image:: images/data-flows/image-1.png
+  :width: 800
