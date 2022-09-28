@@ -82,15 +82,9 @@ Elements of a Template
 |                 |                 | the template    |                 |
 |                 |                 | applies to. See |                 |
 |                 |                 | `Template       |                 |
-|                 |                 | Types <https:// |                 |
-|                 |                 | docs.google.com |                 |
-|                 |                 | /document/d/1Eg |                 |
-|                 |                 | mlvLA2l1SQfOqHB |                 |
-|                 |                 | tZJ-cK3nuKFTkQU |                 |
-|                 |                 | Y93iyycuA1g/edi |                 |
-|                 |                 | t#heading=h.4oz |                 |
-|                 |                 | cnvjuhnd6>`__   |                 |
-|                 |                 | for a fuller    |                 |
+|                 |                 | Types <template |                 |
+|                 |                 | -types>`        |                 |
+|                 |                 | for a full      |                 |
 |                 |                 | description of  |                 |
 |                 |                 | template types. |                 |
 +-----------------+-----------------+-----------------+-----------------+
@@ -104,15 +98,9 @@ Elements of a Template
 |                 |                 | connection. See |                 |
 |                 |                 | `Connection     |                 |
 |                 |                 | Type            |                 |
-|                 |                 | Templates <http |                 |
-|                 |                 | s://docs.google |                 |
-|                 |                 | .com/document/d |                 |
-|                 |                 | /1EgmlvLA2l1SQf |                 |
-|                 |                 | OqHBtZJ-cK3nuKF |                 |
-|                 |                 | TkQUY93iyycuA1g |                 |
-|                 |                 | /edit#heading=h |                 |
-|                 |                 | .qxxmqy5x1oci>` |                 |
-|                 |                 | __              |                 |
+|                 |                 | Templates <#con |                 |
+|                 |                 | nection-type-te |                 |
+|                 |                 | mplates>`__     |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | destType        | string          | Only valid for  | FogLAMP         |
 |                 |                 | templates that  |                 |
@@ -124,15 +112,9 @@ Elements of a Template
 |                 |                 | connection. See |                 |
 |                 |                 | `Connection     |                 |
 |                 |                 | Type            |                 |
-|                 |                 | Templates <http |                 |
-|                 |                 | s://docs.google |                 |
-|                 |                 | .com/document/d |                 |
-|                 |                 | /1EgmlvLA2l1SQf |                 |
-|                 |                 | OqHBtZJ-cK3nuKF |                 |
-|                 |                 | TkQUY93iyycuA1g |                 |
-|                 |                 | /edit#heading=h |                 |
-|                 |                 | .qxxmqy5x1oci>` |                 |
-|                 |                 | __              |                 |
+|                 |                 | Templates <#con |                 |
+|                 |                 | nection-type-te |                 |
+|                 |                 | mplates>`__     |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | validSrc        | array           | List of         | [ "FlirAX8" ]   |
 |                 |                 | templates that  |                 |
@@ -314,20 +296,7 @@ Elements of a Template
 |                 |                 | never define    |                 |
 |                 |                 | actual values,  |                 |
 |                 |                 | only default    |                 |
-|                 |                 | values. This is |                 |
-|                 |                 | important to    |                 |
-|                 |                 | the way         |                 |
-|                 |                 | `inheritance <h |                 |
-|                 |                 | ttps://docs.goo |                 |
-|                 |                 | gle.com/documen |                 |
-|                 |                 | t/d/1EgmlvLA2l1 |                 |
-|                 |                 | SQfOqHBtZJ-cK3n |                 |
-|                 |                 | uKFTkQUY93iyycu |                 |
-|                 |                 | A1g/edit#headin |                 |
-|                 |                 | g=h.805g4yctwxz |                 |
-|                 |                 | y>`__           |                 |
-|                 |                 | works within    |                 |
-|                 |                 | templates.      |                 |
+|                 |                 | values.         |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | properties[].d\ | string          | A human         | Asset Name      |
 | isplayName      |                 | readable        | Prefix          |
@@ -406,6 +375,8 @@ FogLAMP Manage supports a number of different templates types;
    for defining the rules to evaluate on the data and the mechanism
    for delivering Event Processors when those rules trigger.
 
+.. _target to asset templates:
+
 Asset Type Templates
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -435,9 +406,9 @@ are;
 
 -  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -472,6 +443,8 @@ following form:
 .. image:: images/templates/image-1.png
   :width: 700
 
+.. _target to data source templates:
+
 Data Source Type Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -479,8 +452,7 @@ About Data Source Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A Data Source Template is used to create an instance of a Data Source.
-For information on what a Data Source is, see the `Data
-Sources <#data-sources>`__ section.
+For information on what a Data Source is, see the :ref:`target to data sources`.
 
 Data Source Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -500,11 +472,11 @@ Data Source Template Skeleton
 The core configuration elements in the definition of a Data Source
 Template are;
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -601,6 +573,8 @@ the following form:
 .. image:: images/templates/image-2.png
   :width: 700
 
+.. _target to connection templates:
+
 Connection Type Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -652,11 +626,11 @@ Asset to Data Source
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -685,11 +659,11 @@ Asset to FogLAMP
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -718,11 +692,11 @@ Data Source to FogLAMP
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -751,11 +725,11 @@ FogLAMP to Integration
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -850,6 +824,8 @@ omitted from the following example:
         "rights" : {"use" : true, "inherit" : true, "update" : false}
     }
 
+.. _target to integration templates:
+
 Integration Templates
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -857,7 +833,7 @@ About Integration Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An Integration Template is used to create an instance of an Integration.
-For information on what an Integration is, see the `Integrations <#integrations>`__ section.
+For information on what an Integration is, see the :ref:`target to integrations` section.
 
 Integration Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -877,11 +853,11 @@ Integration Template Skeleton
 The core configuration elements in the definition of an Integration
 Template are;
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
--  `Filters <#defining-filters-in-a-template>`__
+-  :ref:`Filters<target to define filters>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -949,6 +925,8 @@ the following form:
 .. image:: images/templates/image-3.png
   :width: 700
 
+.. _target to filter templates:
+
 Filter Type Templates
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -957,9 +935,9 @@ About Filter Templates
 
 A Filter Template defines both the plugin and properties used to create
 a Filter. For information on what a Filter is, see the
-`Filters <#filters>`__ section.
+:ref:`target to filters` section.
 
-When designing Filter Templates it is important to stay cognisant of
+When designing Filter Templates it is important to stay cognizant of
 whether you are defining a Filter to be used as an ad hoc or embedded
 filter. Below you will find a brief description of each method for
 adding a Filter.
@@ -997,9 +975,9 @@ Filter Template Skeleton
 The core configuration elements in the definition of an Integration
 Template are;
 
--  `Software <#id9>`__
+-  :ref:`Software<target to define software>`
 
--  `Properties <#defining-properties-in-a-template>`__
+-  :ref:`Properties<target to define properties>`
 
 For information on these fields and how to configure them, see the
 linked sections.
@@ -1070,6 +1048,8 @@ you will see the following form:
 
 .. image:: images/templates/image-4.png
   :width: 700
+
+.. _target to event processor templates:
 
 Event Processor Type Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1490,6 +1470,8 @@ properties required to configure the defined software. When using a
 Template to create an entity, the way in which the properties are
 defined will dictate what information the user must provide.
 
+.. _target to define properties:
+
 Defining Properties in a Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1791,6 +1773,8 @@ When creating an entity using a Template, for each Filter defined in the
 “filters” property, a Filter will be created and attached to the entity.
 The user will be prompted to provide all of the non immutable properties
 required to configure the Filter(s).
+
+.. _target to define filters:
 
 Defining Filters in a Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

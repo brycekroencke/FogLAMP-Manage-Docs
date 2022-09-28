@@ -58,8 +58,7 @@ presented.
 
 Expand the **Choose Template** dropdown and select the Template which
 corresponds to the Asset being created. If the desired Template does not
-yet exist, see the section titled `Asset
-Templates <#asset-type-templates>`__. Once selected, a new form will
+yet exist, see :ref:`target to asset templates`. Once selected, a new form will
 load containing information as defined in the selected Template. This
 includes details about the software as well as input fields for the
 Assets name and defined properties. Give the Asset a meaningful name
@@ -70,13 +69,14 @@ complete the creation of the Asset.
 **If method two was used**: Complete the Add Connection form (shown
 below) to finalize the Connection between the existing Data Source and
 the newly created Asset. For a basic Connection, leaving everything as
-default and clicking **Save** will suffice. See the sections `Connection
-Templates <#connection-type-templates>`__ and
-`Connections <#connections>`__ for information about advanced Connection
+default and clicking **Save** will suffice. See the :ref:`target to connection templates` and
+:ref:`target to connections` for information about advanced Connection
 configurations.
 
 .. image:: images/data-flows/image-6.png
   :width: 800
+
+.. _target to data sources:
 
 Data Sources
 ------------
@@ -119,8 +119,7 @@ presented.
 Provide a meaningful name for the Data Source. Next expand the **Choose
 Template** dropdown and select the Template which corresponds to the
 Data Source being created. If the desired Template does not yet exist,
-see the section titled `Data Source
-Templates <#data-source-type-templates>`__. Once selected, a new form
+see :ref:`target to data source templates`. Once selected, a new form
 will load containing information as defined in the selected Template.
 This includes input fields for defined properties and details about the
 software. Fill in the properties as required and click the **Save**
@@ -129,13 +128,14 @@ button to complete the creation of the Data Source.
 **If method two was used**: To complete the Connection between the
 existing Asset and the newly created Data Source complete the Add
 Connection form (shown below). For a basic Connection, leaving
-everything as default and clicking **Save** will suffice. See the
-sections `Connection Templates <#connection-type-templates>`__ and
-`Connections <#connections>`__ for information about advanced Connection
+everything as default and clicking **Save** will suffice. See :ref:`target to connection templates` and
+:ref:`target to connections` for information about advanced Connection
 configurations.
 
 .. image:: images/data-flows/image-8.png
   :width: 800
+
+.. _target to integrations:
 
 Integrations
 ------------
@@ -161,13 +161,14 @@ To begin the creation of an Integration, navigate to the Flows page and
 click the **+ Add Integration** button. Provide a meaningful name for
 the Integration. Next expand the **Choose Template** dropdown and select
 the Template which corresponds to the Integration being created. If the
-desired Template does not yet exist, see the section titled `Integration
-Templates <#integration-templates>`__ for information on how to create
+desired Template does not yet exist, see :ref:`target to integration templates` for information on how to create
 one. Once selected, a new form will load containing information as
 defined in the selected Template. This includes input fields for defined
 properties and details about the software. Fill in the properties as
 required and click the **Save** button to complete the creation of the
 Integration.
+
+.. _target to filters:
 
 Filters
 -------
@@ -207,8 +208,7 @@ entity are considered to be a part of that entity, thus these Filters
 will not appear in the South Filters and North Filters columns of the
 Flows page.
 
-See the `Filters Template <#filter-type-templates>`__ and `Defining
-Filters in a Template <#defining-filters-in-a-template>`__ sections for
+See :ref:`target to filter templates` and :ref:`target to define filters` for
 more information on custom and embedded Filters.
 
 How to Add a Filter
@@ -226,8 +226,9 @@ There are two ways in which Filters can be added to a Data Flow.
 2. The second method is to embed Filters into Template definitions.
    Filter pipelines can be embedded into Connection, Data Source, or
    Integration Templates. For more information on how to embed a
-   Filter into a Template, see the section `Filter
-   Templates <#filter-type-templates>`__.
+   Filter into a Template, see :ref:`target to filter templates`.
+
+.. _target to connections:
 
 Connections
 -----------
@@ -239,14 +240,13 @@ Connections in FogLAMP Manage are responsible for connecting two
 entities. By connecting together Assets, Data Sources, FogLAMPs, and
 Integrations a full Data Flow can be formed. Filters can be added to a
 Connection to provide additional processing of data at the Connection
-level. See the `Filters <#filters>`__ section for more information.
+level. See the :ref:`target to filters` for more information.
 
 FogLAMP Manage ships with generic Connection Templates for connecting
 any Asset to any Data Source, any Data Source to a FogLAMP, and a
 FogLAMP to any Integration.
 
-For more information on custom Connections, see the `Connection
-Templates <#connection-type-templates>`__ section.
+For more information on custom Connections, see :ref:`target to connection templates`.
 
 How to Add a Connection
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -262,7 +262,7 @@ to from the **FogLAMP** dropdown menu. Once a FogLAMP is selected,
 choose the desired Connection Template from the **Connection Template**
 dropdown menu. Note, if there exists only one compatible Connection
 Template, then it will be preselected from the dropdown menu
-automatically. Here you also have the option to add a FIlter to the
+automatically. Here you also have the option to add a Filter to the
 Connection or provide a custom name for the Connection. Finally, click
 **Save** to finish creating the Connection.
 
