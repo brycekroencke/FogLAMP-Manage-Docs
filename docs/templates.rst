@@ -469,7 +469,8 @@ like.
 When creating an Asset using the "Pump" Template, you will see the
 following form:
 
-|image20|
+..
+  |image20|
 
 Data Source Type Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -597,7 +598,8 @@ properties used to configure the foglamp-south-flirax8 software.
 When creating a Data Source using the "flirax8" Template, you will see
 the following form:
 
-|image21|
+..
+  |image21|
 
 Connection Type Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -945,7 +947,8 @@ Examples
 When creating an Integration using the "kafka" Template, you will see
 the following form:
 
-|image22|
+..
+  |image22|
 
 Filter Type Templates
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1066,7 +1069,8 @@ this data conversion.
 When attaching an ad hoc Filter using the "expression-filter" Template,
 you will see the following form:
 
-|image23|
+..
+  |image23|
 
 Event Processor Type Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1372,7 +1376,8 @@ configured address.
 When creating an Event Processor using the "Threshold to Email"
 Template, you will see the following form:
 
-|image24|
+..
+  |image24|
 
 Template Software
 -----------------
@@ -1634,7 +1639,8 @@ above:
 When adding an entity using a Template with the properties defined
 above, the entities configuration page will look as shown below:
 
-|image25|
+..
+  |image25|
 
 **Note:** The property "intergerInput" does not appear in this menu,
 because immutable was set to true. The default value of 100 will be
@@ -1643,12 +1649,14 @@ used.
 Hovering over the property will display the description defined in the
 Template:
 
-|image26|
+..
+  |image26|
 
 Expanding the Options Input dropdown menu will show all the options
 defined in the Template for the enumeration type property:
 
-|image27|
+..
+  |image27|
 
 The rules regarding how properties are managed in creation requests are:
 
@@ -1868,13 +1876,15 @@ above:
 
 When we create an instance of the Asset, we see the following form:
 
-|image28|
+..
+  |image28|
 
 This form requests the three properties that are defined in the
 “expression-filter” Template. Once the Asset has been created, we see
 the Template defined with the Asset.
 
-|image29|
+..
+  |image29|
 
 Embedding Multiple Filters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1899,9 +1909,11 @@ Now when we create an instance of this Asset, we will be prompted with
 the properties required to configure both Filters. And when the Asset
 has been created, we will see that two Filters are attached.
 
-|image30|
+..
+  |image30|
 
-|image31|
+..
+  |image31|
 
 Embedding Filters With Immutable Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1965,9 +1977,11 @@ only have immutable properties.
 
 Creating an instance of the Asset now shows us the following form:
 
-|image32|
+..
+  |image32|
 
-|image33|
+..
+  |image33|
 
 Template Ownership & Rights
 ---------------------------
@@ -2010,7 +2024,8 @@ The following information is available on a per Template basis:
 -  Rights - The rights for use, update, and inherit as defined in the
    Template
 
-|image34|
+..
+  |image34|
 
 Adding a New Template
 ~~~~~~~~~~~~~~~~~~~~~
@@ -2026,7 +2041,8 @@ prewritten JSON Template saved on your device. The GUI’s editor will
 enforce JSON formatting to mitigate errors. Once finished, click
 **Save** to complete the process of adding a new Template.
 
-|image35|
+..
+  |image35|
 
 Modifying a Template
 ~~~~~~~~~~~~~~~~~~~~

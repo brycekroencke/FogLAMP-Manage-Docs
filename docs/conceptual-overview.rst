@@ -265,7 +265,8 @@ the values. An example of this is the address and credentials for the PI
 Server can be associated with the integration that represents the PI
 Server.
 
-|image0|
+..
+  |image0|
 
 While this may not seem of particular importance in this single instance
 of FogLAMP it allows for better data sharing where multiple FogLAMPs are
@@ -279,7 +280,8 @@ camera and take the visual data feed from the camera. In the FogLAMP
 model of things the new south plugin would require a set of
 configuration information to allow it to connect to the camera.
 
-|image1|
+..
+  |image1|
 
 In the FogLAMP Manage abstract view however, we merely create a new
 connection between the FogLAMP and the FLIR camera. The difference
@@ -423,7 +425,8 @@ of FogLAMP Manage can generate templates that are tailored to the
 requirements of that implementation. The templates can define default
 values that can be used to customize the behavior of an object.
 
-|image2|
+..
+  |image2|
 
 Template Types
 ~~~~~~~~~~~~~~

@@ -13,7 +13,8 @@ integrations.
 
 The sections below go over each component of a Data Flow in detail.
 
-|image8|
+..
+  |image8|
 
 Assets
 ------
@@ -34,7 +35,8 @@ of a Data Flow; however, they allow for real world use cases to be
 modeled digitally in an abstract manner. By creating an *Asset*, your
 Data Flow will be more human interpretable and easier to organize.
 
-|image9|
+..
+  |image9|
 
 How to add an Asset Using the GUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,7 +57,8 @@ paths that can be taken to initiate the process of creating an Asset.
 After completing either of the above methods, the following form will be
 presented.
 
-|image10|
+..
+  |image10|
 
 Expand the **Choose Template** dropdown and select the Template which
 corresponds to the Asset being created. If the desired Template does not
@@ -76,7 +79,8 @@ Templates <#connection-type-templates>`__ and
 `Connections <#connections>`__ for information about advanced Connection
 configurations.
 
-|image11|
+..
+  |image11|
 
 Data Sources
 ------------
@@ -94,7 +98,8 @@ Within FogLAMP Manage Data Flows, Data Source entities are used to model
 the physical data sources. Data Sources are typically used to produce
 data pertaining to your Assets.
 
-|image12|
+..
+  |image12|
 
 How to add a Data Source
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +119,10 @@ Source.
    Source being created.
 
 After completing either of the above methods, the following form will be
-presented.\ |image13|
+presented.
+
+..
+  |image13|
 
 Provide a meaningful name for the Data Source. Next expand the **Choose
 Template** dropdown and select the Template which corresponds to the
@@ -134,7 +142,8 @@ sections `Connection Templates <#connection-type-templates>`__ and
 `Connections <#connections>`__ for information about advanced Connection
 configurations.
 
-|image14|
+..
+  |image14|
 
 Integrations
 ------------
@@ -153,7 +162,8 @@ Integrations for all major cloud providers and all major outbound
 protocols. Some commonly used Integrations include PI OMF, GCP, MQTT,
 and OPCUA.
 
-|image15|
+..
+  |image15|
 
 How to add an Integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -294,7 +304,8 @@ physical assets, enabling the user to see which Data Sources are
 monitored for a given Asset, which FogLAMP(s) process that Asset’s data,
 and which Integrations they deliver it to.
 
-|image16|
+..
+  |image16|
 
 Grouped and Sorted by Data Sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -304,9 +315,8 @@ are processed by your system. For each Data Source, you can see the
 Asset(s) it comes from, the FogLAMP(s) that process it, and the
 Integrations the data is delivered to.
 
-.. _section-1:
-
-|image17|
+..
+  |image17|
 
 Grouped and Sorted by FogLAMPs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -316,9 +326,8 @@ processing your IIoT data. For each FogLAMP, you can see the Asset(s)
 and Data Sources they are monitoring and the Integrations the data is
 delivered to.
 
-.. _section-2:
-
-|image18|
+..
+  |image18|
 
 
 Grouped and Sorted by Integrations
@@ -329,6 +338,5 @@ data in your system. For each Integration, you can see the Asset(s) and
 Data Source(s) that are monitored and the FogLAMP(s) that process the
 monitored data.
 
-.. _section-3:
-
-|image19|
+..
+  |image19|
