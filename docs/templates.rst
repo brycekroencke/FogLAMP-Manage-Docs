@@ -236,23 +236,23 @@ Elements of a Template
 |                 |                 | package         |                 |
 |                 |                 | required.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].plug | string          | The plugin name | HTTP-South      |
-| in              |                 | of the plugin   |                 |
+| software[].plugin | string          | The plugin name | HTTP-South      |
+|                 |                 | of the plugin   |                 |
 |                 |                 | to use.         |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].vers | Object          | The version     |                 |
-| ion             |                 | constraints for |                 |
+| software[].version | Object          | The version     |                 |
+|                 |                 | constraints for |                 |
 |                 |                 | the software    |                 |
 |                 |                 | package.        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].vers | string          | The minimum     | 1.0.3           |
-| ion.minimum     |                 | version of the  |                 |
+| software[].version.minimum | string          | The minimum     | 1.0.3           |
+|                 |                 | version of the  |                 |
 |                 |                 | package that    |                 |
 |                 |                 | this template   |                 |
 |                 |                 | requires.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].vers | string          | An optional     | 1.5.2           |
-| ion.maximum     |                 | maximum version |                 |
+| software[].version.maximum | string          | An optional     | 1.5.2           |
+|                 |                 | maximum version |                 |
 |                 |                 | that this       |                 |
 |                 |                 | template        |                 |
 |                 |                 | requires for    |                 |
@@ -271,8 +271,8 @@ Elements of a Template
 |                 |                 | defined as the  |                 |
 |                 |                 | minimum.        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].qual | string          | Optional. Used  | source          |
-| ifier           |                 | for connector   |                 |
+| software[].qualifier | string          | Optional. Used  | source          |
+|                 |                 | for connector   |                 |
 |                 |                 | type templates  |                 |
 |                 |                 | to indicate if  |                 |
 |                 |                 | the software is |                 |
@@ -288,11 +288,11 @@ Elements of a Template
 |                 |                 | -in-a-template> |                 |
 |                 |                 | `__             |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].na | string          | The name of the | assetPrefix     |
-| me              |                 | property        |                 |
+| properties[].name | string          | The name of the | assetPrefix     |
+|                 |                 | property        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].ty | string          | Type type of    | string          |
-| pe              |                 | the property.   |                 |
+| properties[].type | string          | Type type of    | string          |
+|                 |                 | the property.   |                 |
 |                 |                 | This may be any |                 |
 |                 |                 | of the types    |                 |
 |                 |                 | defined in      |                 |
@@ -307,8 +307,8 @@ Elements of a Template
 |                 |                 | Types <#propert |                 |
 |                 |                 | y-types>`__     |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].de | string          | The default     | http            |
-| fault           |                 | value of the    |                 |
+| properties[].default | string          | The default     | http            |
+|                 |                 | value of the    |                 |
 |                 |                 | property. Note  |                 |
 |                 |                 | that templates  |                 |
 |                 |                 | never define    |                 |
@@ -329,20 +329,20 @@ Elements of a Template
 |                 |                 | works within    |                 |
 |                 |                 | templates.      |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].di | string          | A human         | Asset Name      |
-| splayName       |                 | readable        | Prefix          |
+| properties[].displayName | string          | A human         | Asset Name      |
+|                 |                 | readable        | Prefix          |
 |                 |                 | display name    |                 |
 |                 |                 | for use in user |                 |
 |                 |                 | interfaces.     |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].de | string          | A human         | The Asset Name  |
-| scription       |                 | readable        | to use for data |
+| properties[].description | string          | A human         | The Asset Name  |
+|                 |                 | readable        | to use for data |
 |                 |                 | description of  | ingested on     |
 |                 |                 | the property.   | this            |
 |                 |                 |                 | connection.     |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].op | Array           | Only used if    | ["Option 1",    |
-| tions           |                 | properties.type | "Option 2"]     |
+| properties[].options | Array           | Only used if    | ["Option 1",    |
+|                 |                 | properties.type | "Option 2"]     |
 |                 |                 | is enumeration. |                 |
 |                 |                 | A list of the   |                 |
 |                 |                 | options that    |                 |
@@ -350,13 +350,13 @@ Elements of a Template
 |                 |                 | in the dropdown |                 |
 |                 |                 | menu.           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].or | integer         | An order to use | 2               |
-| der             |                 | when building a |                 |
+| properties[].order | integer         | An order to use | 2               |
+|                 |                 | when building a |                 |
 |                 |                 | UI to display   |                 |
 |                 |                 | the properties. |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].im | boolean         | A flag that can | false           |
-| mutable         |                 | prevent users   |                 |
+| properties[].immutable | boolean         | A flag that can | false           |
+|                 |                 | prevent users   |                 |
 |                 |                 | of the template |                 |
 |                 |                 | from entering   |                 |
 |                 |                 | values other    |                 |
@@ -418,23 +418,16 @@ information on what an Asset is, see the `Assets <#assets>`__ section.
 Asset Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-{
-
-"name": "YOUR_ASSET_NAME",
-
-"type": "Asset",
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+.. code-block:: JSON
+    {
+        "name": "YOUR_ASSET_NAME",
+        "type": "Asset",
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 The core configuration elements in the definition of an Asset Template
 are;
@@ -2758,112 +2751,3 @@ existing occurrences of the Template. Select **Deprecate** from the
 menu. Finally, a confirmation box will appear asking to confirm the
 depreciation, click **Confirm**. Deprecating a Template prevents you
 from creating new instances of that entity in the future.
-
-.. |image0| image:: media/image29.png
-   :width: 4.49479in
-   :height: 0.91878in
-.. |image1| image:: media/image16.png
-   :width: 4.01098in
-   :height: 1.31771in
-.. |image2| image:: media/image33.png
-   :width: 10.25417in
-   :height: 2.4399in
-.. |image3| image:: media/image31.jpg
-   :width: 8.4933in
-   :height: 4.77626in
-.. |image4| image:: media/image7.png
-   :width: 3.24088in
-   :height: 2.70073in
-.. |image5| image:: media/image23.png
-   :width: 4.00521in
-   :height: 1.60577in
-.. |image6| image:: media/image31.jpg
-   :width: 8.4933in
-   :height: 4.77626in
-.. |image7| image:: media/image12.png
-   :width: 7.12148in
-   :height: 2.17246in
-.. |image8| image:: media/image3.png
-   :width: 8.86979in
-   :height: 2.3151in
-.. |image9| image:: media/image14.png
-   :width: 3.54688in
-   :height: 5.67088in
-.. |image10| image:: media/image13.png
-   :width: 21.33333in
-   :height: 1.92708in
-.. |image11| image:: media/image1.png
-   :width: 21.33333in
-   :height: 5.03125in
-.. |image12| image:: media/image14.png
-   :width: 3.78646in
-   :height: 5.37559in
-.. |image13| image:: media/image8.png
-   :width: 21.33333in
-   :height: 2.47917in
-.. |image14| image:: media/image9.png
-   :width: 21.33333in
-   :height: 4.41667in
-.. |image15| image:: media/image14.png
-   :width: 2.86979in
-   :height: 4.40035in
-.. |image16| image:: media/image28.png
-   :width: 9.35512in
-   :height: 3.08335in
-.. |image17| image:: media/image30.png
-   :width: 9.28646in
-   :height: 2.60275in
-.. |image18| image:: media/image10.png
-   :width: 9.24479in
-   :height: 2.57753in
-.. |image19| image:: media/image26.png
-   :width: 9.25521in
-   :height: 3.03687in
-.. |image20| image:: media/image15.png
-   :width: 21.33333in
-   :height: 3.10417in
-.. |image21| image:: media/image4.png
-   :width: 21.33333in
-   :height: 8.26042in
-.. |image22| image:: media/image21.png
-   :width: 21.33333in
-   :height: 7.08333in
-.. |image23| image:: media/image25.png
-   :width: 21.17708in
-   :height: 6.70363in
-.. |image24| image:: media/image22.png
-   :width: 21.33333in
-   :height: 11.61458in
-.. |image25| image:: media/image17.png
-   :width: 10.39758in
-   :height: 0.9697in
-.. |image26| image:: media/image27.png
-   :width: 21.33333in
-   :height: 2.25in
-.. |image27| image:: media/image19.png
-   :width: 21.33333in
-   :height: 2.125in
-.. |image28| image:: media/image20.png
-   :width: 21.33333in
-   :height: 8.55208in
-.. |image29| image:: media/image6.png
-   :width: 21.33333in
-   :height: 4.67708in
-.. |image30| image:: media/image2.png
-   :width: 21.33333in
-   :height: 13.05208in
-.. |image31| image:: media/image11.png
-   :width: 21.33333in
-   :height: 4.59375in
-.. |image32| image:: media/image5.png
-   :width: 21.33333in
-   :height: 6.0625in
-.. |image33| image:: media/image18.png
-   :width: 21.33333in
-   :height: 3.86458in
-.. |image34| image:: media/image32.png
-   :width: 21.33333in
-   :height: 6.19792in
-.. |image35| image:: media/image24.png
-   :width: 21.33333in
-   :height: 3.08333in
