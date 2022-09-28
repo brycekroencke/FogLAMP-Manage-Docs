@@ -1,4 +1,4 @@
-   **Data Flows**
+**Data Flows**
 ==============
 
 What is a Data Flow
@@ -14,7 +14,6 @@ integrations.
 The sections below go over each component of a Data Flow in detail.
 
 |image8|
---------
 
 Assets
 ------
@@ -308,7 +307,6 @@ Integrations the data is delivered to.
 .. _section-1:
 
 |image17|
-~~~~~~~~~
 
 Grouped and Sorted by FogLAMPs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -321,7 +319,7 @@ delivered to.
 .. _section-2:
 
 |image18|
-~~~~~~~~~
+
 
 Grouped and Sorted by Integrations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -334,4 +332,3 @@ monitored data.
 .. _section-3:
 
 |image19|
-~~~~~~~~~
