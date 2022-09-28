@@ -413,7 +413,7 @@ About Asset Templates
 ^^^^^^^^^^^^^^^^^^^^^
 
 An Asset Template is used to create an instance of an Asset. For
-information on what an Asset is, see the `Assets <#assets>`__ section.
+information on what an Asset is, see the :ref:`Software <target to assets>`__ section.
 
 Asset Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -433,7 +433,7 @@ Asset Template Skeleton
 The core configuration elements in the definition of an Asset Template
 are;
 
--  `Properties <#id9>`__
+-  :ref:`Software <target to define software>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -500,7 +500,7 @@ Data Source Template Skeleton
 The core configuration elements in the definition of a Data Source
 Template are;
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -652,7 +652,7 @@ Asset to Data Source
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -685,7 +685,7 @@ Asset to FogLAMP
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -718,7 +718,7 @@ Data Source to FogLAMP
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -751,7 +751,7 @@ FogLAMP to Integration
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -877,7 +877,7 @@ Integration Template Skeleton
 The core configuration elements in the definition of an Integration
 Template are;
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -997,7 +997,7 @@ Filter Template Skeleton
 The core configuration elements in the definition of an Integration
 Template are;
 
--  `Properties <#id9>`__
+-  `Software <#id9>`__
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -1393,6 +1393,8 @@ version available within the limits defined in this section.
 Connection Templates provide the additional ability to define which end
 of the connection the package should be installed. This may result in
 software being installed in one or both ends of the connection.
+
+.. _target to define software:
 
 Defining Software in a Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
