@@ -433,7 +433,7 @@ Asset Template Skeleton
 The core configuration elements in the definition of an Asset Template
 are;
 
--  :ref:`target to define software`
+-  :ref:`Software<target to define software>`
 
 -  `Properties <#defining-properties-in-a-template>`__
 
