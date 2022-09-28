@@ -48,13 +48,13 @@ It is also important to understand what FogLAMP Manage is not:
 -  Data does not pass through FogLAMP Manage ever.
 
 -  FogLAMP Manage does not provide any mechanism to view the data
-      collected by individual FogLAMP instances.
+   collected by individual FogLAMP instances.
 
 -  FogLAMP Manage does not manage the operating system upon which
-      FogLAMP is running.
+   FogLAMP is running.
 
 -  FogLAMP Manage does not manage the hardware upon which FogLAMP is
-      running.
+   running.
 
 Centralized Management
 -----------------------
@@ -217,7 +217,7 @@ features.
 -  The real world components are more visible
 
 -  Data can be shared between multiple FogLAMP configurations reducing
-      duplication
+   duplication
 
 Abstract Model
 ~~~~~~~~~~~~~~
@@ -232,14 +232,14 @@ camera and sends data to an OSIsoft PI Server.
 If we first look at a FogLAMP view of this configuration we have:
 
 -  A South Service with the FLIR plugin loaded. This service is
-      configured with all the configuration data it needs to pull the
-      thermal data from the FLIR camera; IP address and authentication
-      token.
+   configured with all the configuration data it needs to pull the
+   thermal data from the FLIR camera; IP address and authentication
+   token.
 
 -  A North Service with the OMF plugin loaded. This task is configured
-      with all the configuration data needed to communicate with the PI
-      WEB API endpoint of the PI server. This includes the
-      authentication data, IP address, AF structure, etc.
+   with all the configuration data needed to communicate with the PI
+   WEB API endpoint of the PI server. This includes the
+   authentication data, IP address, AF structure, etc.
 
 The FogLAMP Manage view of this same setup however is very different. In
 FogLAMP Manage what we actually have is four distinct systems;
@@ -251,7 +251,7 @@ FogLAMP Manage what we actually have is four distinct systems;
 -  A Data Source which represents the FLIR camera
 
 -  An Asset which is the item of equipment we are monitoring with the
-      FLIR camera
+   FLIR camera
 
 We then have three connections; one from the asset to the FLIR camera,
 one from the FLIR camera to the FogLAMP and another from the FogLAMP to
@@ -386,10 +386,10 @@ FogLAMP Manage’s configuration management includes the concept of
 version control as the basis for all configuration changes. This allows;
 
 -  All configuration changes to be tracked, producing an audit trail of
-      changes
+   changes
 
 -  Versions of configuration are locked when they are deployed such that
-      they can not be altered after deployment
+   they can not be altered after deployment
 
 -  A deployment can always be returned to a previous point in time
 
@@ -431,28 +431,28 @@ Template Types
 FogLAMP Manage supports a number of different templates types;
 
 -  **Asset -** An Asset Template defines the physical assets being
-      monitored in the logical model that is manipulated by the FogLAMP
-      Manage. Assets are typically pieces of industrial machinery.
+   monitored in the logical model that is manipulated by the FogLAMP
+   Manage. Assets are typically pieces of industrial machinery.
 
 -  **Connection -** A Connection Template defines how entities in the
-      logical model are connected together.
+   logical model are connected together.
 
 -  **Data Source -** A Data Source Template defines external sensors or
-      data collection devices.
+   data collection devices.
 
 -  **Integration -** An Integration Template defines a system north of
-      FogLAMP that receives the data from FogLAMP. This may be the cloud
-      services or the on premise data historians into which data is
-      processed from FogLAMP.
+   FogLAMP that receives the data from FogLAMP. This may be the cloud
+   services or the on premise data historians into which data is
+   processed from FogLAMP.
 
 -  **Filter -** A Filter Template defines a single filter that can be
-      applied to a connection or embedded into another entity. It
-      defines the processing elements that may be applied to the data as
-      it traverses the connection.
+   applied to a connection or embedded into another entity. It
+   defines the processing elements that may be applied to the data as
+   it traverses the connection.
 
 -  **Event Processor -** The Event Processor Template defines the rules
-      to evaluate on the data and the mechanism for delivering Event
-      Processors when those rules trigger.
+   to evaluate on the data and the mechanism for delivering Event
+   Processors when those rules trigger.
 
 An Asset Template Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~

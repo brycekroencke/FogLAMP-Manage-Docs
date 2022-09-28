@@ -14,30 +14,30 @@ template
 Some key functionality offered by the Template management system:
 
 -  Templates provide a mechanism that allows the administrator of the
-      templates to create custom blueprints that can be applied
-      throughout the set of managed FogLAMPs. This means that entities
-      can be tailored to follow in house conventions and limited to
-      allowing just those items that need to differ to be accessible.
-      The full configuration of a plugin is no longer offered to the
-      user and the process is simplified and enforcement of local
-      policies can be applied.
+   templates to create custom blueprints that can be applied
+   throughout the set of managed FogLAMPs. This means that entities
+   can be tailored to follow in house conventions and limited to
+   allowing just those items that need to differ to be accessible.
+   The full configuration of a plugin is no longer offered to the
+   user and the process is simplified and enforcement of local
+   policies can be applied.
 
 -  New templates may be created from a blank starting point or may be
-      created based on an existing template. The latter will inherit
-      from the base template it was created from and maintains the same
-      type of live link to its parent template as an entity does to the
-      template it was created from.
+   created based on an existing template. The latter will inherit
+   from the base template it was created from and maintains the same
+   type of live link to its parent template as an entity does to the
+   template it was created from.
 
 -  Existing Templates can be modified, changing the functionality of
-      existing entities within the version.
+   existing entities within the version.
 
 -  Templates that are not in use in the active version can be deleted,
-      removing it from the version.
+   removing it from the version.
 
 -  Templates that are in use in the active version can be deprecated.
-      Deprecating a Template prevents new entities from being created
-      using the Template while keeping the existing instances of the
-      Templates.
+   Deprecating a Template prevents new entities from being created
+   using the Template while keeping the existing instances of the
+   Templates.
 
 A Template is a definition of both the optional software packages and
 properties required to create an instance of the entity. The properties
@@ -612,18 +612,18 @@ destination. The direction refers to the direction of data flow in the
 connection.
 
 -  srcType - the type of the source entity for this connection. Valid
-      srcTypes include "Asset", "DataSource", and "FogLAMP"
+   srcTypes include "Asset", "DataSource", and "FogLAMP"
 
 -  dstType - the type of the destination entity for this connection.
-      Valid dstTypes include "DataSource", "FogLAMP", and "Integration"
+   Valid dstTypes include "DataSource", "FogLAMP", and "Integration"
 
 -  validSrc - the list of valid source templates that this connection
-      may connect to. If srcType is "FogLAMP" this property should be
-      omitted as it is implied by the type.
+   may connect to. If srcType is "FogLAMP" this property should be
+   omitted as it is implied by the type.
 
 -  validDst - the list of valid destination templates this connection
-      may connect to. If dstType is "FogLAMP" this property should be
-      omitted as it is implied by the type.
+   may connect to. If dstType is "FogLAMP" this property should be
+   omitted as it is implied by the type.
 
 Connection Template Skeletons
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1410,27 +1410,27 @@ The skeleton for the definition of one piece of software is shown below:
 How to configure the elements of a "software" definition:
 
 -  "plugin" - The name of the plugin as seen in FogLAMP and as defined
-      in the plugins code
+   in the plugins code
 
    -  Example: sinusoid
 
 -  "package" - The name of the software package associated with the
-      plugin
+   plugin
 
    -  Example: foglamp-south-sinusoid
 
 -  "description" - A description of what the software does
 
    -  Example: Sinusoid Poll Plugin which implements sine wave with data
-         points
+      points
 
 -  "version.minimum" - The minimum version of the software package to be
-      installed when an entity is created using the Template
+   installed when an entity is created using the Template
 
    -  Example: 1.0.0
 
 -  "version.maximum" - The maximum version of the software package to be
-      installed when an entity is created using the Template
+   installed when an entity is created using the Template
 
    -  Example: 2.0.0
 
@@ -1513,10 +1513,10 @@ How to configure the elements of a "properties" definition:
    -  Example 3: "integerInput"
 
 -  "type" - Type type of the property. This may be any of the types
-      defined in FogLAMP for configuration category types or the
-      particular management types. See the `Property
-      Types <#property-types>`__ section below for more information on
-      the supported types.
+   defined in FogLAMP for configuration category types or the
+   particular management types. See the `Property
+   Types <#property-types>`__ section below for more information on
+   the supported types.
 
    -  Example 1: "string"
 
@@ -1525,9 +1525,9 @@ How to configure the elements of a "properties" definition:
    -  Example 3: "integer"
 
 -  "displayName" - A human readable display name that will appear in the
-      UI when configuring the property. The display name should be
-      descriptive to help the user understand what value they should
-      provide the property with.
+   UI when configuring the property. The display name should be
+   descriptive to help the user understand what value they should
+   provide the property with.
 
    -  Example 1: "String Input"
 
@@ -1536,22 +1536,22 @@ How to configure the elements of a "properties" definition:
    -  Example 3: "Integer Input"
 
 -  "description" - A description of what the user should provide as
-      input for the property and or what the property is used for when
-      configuring the software.
+   input for the property and or what the property is used for when
+   configuring the software.
 
    -  Example 1: "Provide the string value that should be used to
-         configure the software"
+      configure the software"
 
    -  Example 2: "Provide the option that should be used to configure
-         the software"
+      the software"
 
    -  Example 3: "The immutable integer value that is used to configure
-         the software"
+      the software"
 
 -  "default" - The default value of the property. Note that templates
-      never define actual values, only default values. If no alternative
-      value is provided for the property, then the default value will be
-      used.
+   never define actual values, only default values. If no alternative
+   value is provided for the property, then the default value will be
+   used.
 
    -  Example 1: "Default String"
 
@@ -1560,10 +1560,10 @@ How to configure the elements of a "properties" definition:
    -  Example 3: "100"
 
 -  "immutable" - A boolean flag that can prevent users of the template
-      from entering values other than the default given in this
-      template. If immutable is true, then the "default" value will be
-      used and the property will not be displayed on the GUI when
-      configuring the entity.
+   from entering values other than the default given in this
+   template. If immutable is true, then the "default" value will be
+   used and the property will not be displayed on the GUI when
+   configuring the entity.
 
    -  Example 1: "false"
 
@@ -1572,19 +1572,19 @@ How to configure the elements of a "properties" definition:
    -  Example 3: "true"
 
 -  "options" - Only used if the property "type" is enumeration.
-      "options" defines a list of the value options to choose from when
-      configuring the entity.
+   "options" defines a list of the value options to choose from when
+   configuring the entity.
 
    -  Example 1: property type is not "enumeration" so this property is
-         omitted
+      omitted
 
    -  Example 2: "[ \\"Option 1\", \\"Option 2\", \\"Option 3\" ]"
 
    -  Example 3: property type is not "enumeration" so this property is
-         omitted
+      omitted
 
 -  "order" - The order in which the properties should be displayed when
-      configuring the entity in the GUI.
+   configuring the entity in the GUI.
 
    -  Example 1: "1"
 
@@ -1653,18 +1653,18 @@ defined in the Template for the enumeration type property:
 The rules regarding how properties are managed in creation requests are:
 
 1. If a property value is not given in the creation request then the
-      value will be taken from the default that is included in the
-      template.
+   value will be taken from the default that is included in the
+   template.
 
 2. If no default is given for a property and no value is given in the
-      creation request, then an error should be raised.
+   creation request, then an error should be raised.
 
 3. If a property is defined as immutable, then that property must not be
-      given in the creation request. An error should be raised if a
-      value of that property is passed in the creation request.
+   given in the creation request. An error should be raised if a
+   value of that property is passed in the creation request.
 
 4. All values given for properties in the create request should be type
-      checked as per the type defined in the property.
+   checked as per the type defined in the property.
 
 Property Types
 ~~~~~~~~~~~~~~
@@ -1998,17 +1998,17 @@ modify, deprecate, and delete existing templates.
 The following information is available on a per Template basis:
 
 -  Template Name - Shows the name of the Template as defined in the
-      Template. Clicking this name will bring you to the Templates
-      definition.
+   Template. Clicking this name will bring you to the Templates
+   definition.
 
 -  Occurrences - Shows all existing entities that were created using the
-      corresponding Template. Clicking on an occurrence will bring you
-      to the configuration page of that entity.
+   corresponding Template. Clicking on an occurrence will bring you
+   to the configuration page of that entity.
 
 -  Owner - The owner of the Template as defined in the Template
 
 -  Rights - The rights for use, update, and inherit as defined in the
-      Template
+   Template
 
 |image34|
 

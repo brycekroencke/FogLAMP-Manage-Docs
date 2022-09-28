@@ -1,4 +1,4 @@
-**Data Flows**
+   **Data Flows**
 ==============
 
 What is a Data Flow
@@ -44,14 +44,14 @@ To add an Asset, navigate to the Flows page. From here there are two
 paths that can be taken to initiate the process of creating an Asset.
 
 1. The first, and most direct way to begin creating a new Asset is to
-      click the **+ Add Asset** button on the Flows page.
+   click the **+ Add Asset** button on the Flows page.
 
 2. The second method is to select an existing Data Source within the
-      Flows page. Then within the Data Sources configuration locate and
-      click the **Add Connection** button. Finally, in the **Select
-      Entity** dropdown, choose **Create New.** This method will
-      initiate the creation of a Connection between the existing Data
-      Source and the Asset being created.
+   Flows page. Then within the Data Sources configuration locate and
+   click the **Add Connection** button. Finally, in the **Select
+   Entity** dropdown, choose **Create New.** This method will
+   initiate the creation of a Connection between the existing Data
+   Source and the Asset being created.
 
 After completing either of the above methods, the following form will be
 presented.
@@ -105,14 +105,14 @@ two paths that can be taken to initiate the process of creating a Data
 Source.
 
 1. The first, and most direct way to begin creating a new Data Source is
-      to click the **+ Add Data Source** button on the Flows page.
+   to click the **+ Add Data Source** button on the Flows page.
 
 2. The second method is to select an existing Asset within the Flows
-      page. Then within the Assets configuration locate and click the
-      **Add Connection** button. Finally, in the **Select Entity**
-      dropdown, choose **Create New.** This method will initiate the
-      creation of a Connection between the existing Asset and the Data
-      Source being created.
+   page. Then within the Assets configuration locate and click the
+   **Add Connection** button. Finally, in the **Select Entity**
+   dropdown, choose **Create New.** This method will initiate the
+   creation of a Connection between the existing Asset and the Data
+   Source being created.
 
 After completing either of the above methods, the following form will be
 presented.\ |image13|
@@ -219,17 +219,17 @@ How to Add a Filter
 There are two ways in which Filters can be added to a Data Flow.
 
 1. The first is to attach ad hoc Filters to Connections to and from a
-      FogLAMP. To add an ad hoc Filter, navigate to the Flows page and
-      select the entity whose connection you would like to add a Filter
-      to. In the section titled Connection to FogLAMPs, select **+ Add
-      Filter**. Complete the Add Filter form in the same manner that you
-      would create any other Entity.
+   FogLAMP. To add an ad hoc Filter, navigate to the Flows page and
+   select the entity whose connection you would like to add a Filter
+   to. In the section titled Connection to FogLAMPs, select **+ Add
+   Filter**. Complete the Add Filter form in the same manner that you
+   would create any other Entity.
 
 2. The second method is to embed Filters into Template definitions.
-      Filter pipelines can be embedded into Connection, Data Source, or
-      Integration Templates. For more information on how to embed a
-      Filter into a Template, see the section `Filter
-      Templates <#filter-type-templates>`__.
+   Filter pipelines can be embedded into Connection, Data Source, or
+   Integration Templates. For more information on how to embed a
+   Filter into a Template, see the section `Filter
+   Templates <#filter-type-templates>`__.
 
 Connections
 -----------

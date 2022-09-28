@@ -30,31 +30,31 @@ Within the Version Control page, the following information is available
 per version:
 
 -  **Version** - Semantic Versioning number following the following
-      notation: MAJOR.MINOR.PATCH.
+   notation: MAJOR.MINOR.PATCH.
 
 -  **Locked / Unlocked** - A lock appearing next to a version signifies
-      that it has been previously deployed and now locked. An unlocked
-      version has not yet been deployed and allows for changes to be
-      made to a FogLAMPs configuration.
+   that it has been previously deployed and now locked. An unlocked
+   version has not yet been deployed and allows for changes to be
+   made to a FogLAMPs configuration.
 
 -  **Live** - Live appearing next to a version signifies that it is the
-      version that is currently deployed. Only one version can be live
-      at a time.
+   version that is currently deployed. Only one version can be live
+   at a time.
 
 -  **Description** - Descriptions can be added to each version to
-      provide information on what the version contains.
+   provide information on what the version contains.
 
 -  **Deployed** - If the version is locked, it will contain the date of
-      deployment. If unlocked, the version has not yet been deployed.
+   deployment. If unlocked, the version has not yet been deployed.
 
 -  **Parent** - The previous version that the current version was based
-      on.
+   on.
 
 -  **+/-** - Buttons used to open and close the Version Logs for a given
-      version.
+   version.
 
--  **Version Logs** - Cronologicial logs that track every change that
-      was made within the version.
+-  **Version Logs** - Chronological logs that track every change that
+   was made within the version.
 
 Version Control Page in GUI
 ---------------------------
