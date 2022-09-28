@@ -413,7 +413,7 @@ About Asset Templates
 ^^^^^^^^^^^^^^^^^^^^^
 
 An Asset Template is used to create an instance of an Asset. For
-information on what an Asset is, see the :ref:`Software <target to assets>`__ section.
+information on what an Asset is, see the :ref:`target to assets` section.
 
 Asset Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -433,7 +433,7 @@ Asset Template Skeleton
 The core configuration elements in the definition of an Asset Template
 are;
 
--  :ref:`Software <target to define software>`__
+-  :ref:`target to define software`
 
 -  `Properties <#defining-properties-in-a-template>`__
 
