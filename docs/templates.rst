@@ -433,7 +433,7 @@ Asset Template Skeleton
 The core configuration elements in the definition of an Asset Template
 are;
 
--  `Software <#defining-software-in-a-template>`__
+-  :ref:`Software <Defining Software in a Template>`
 
 -  `Properties <#defining-properties-in-a-template>`__
 
@@ -857,8 +857,7 @@ About Integration Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An Integration Template is used to create an instance of an Integration.
-For information on what an Integration is, see the `Data
-Sources <#data-sources>`__ section.
+For information on what an Integration is, see the `Integrations <#integrations>`__ section.
 
 Integration Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
