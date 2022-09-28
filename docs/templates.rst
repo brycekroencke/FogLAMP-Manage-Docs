@@ -384,27 +384,27 @@ Template Types
 FogLAMP Manage supports a number of different templates types;
 
 -  **Asset -** Asset Templates describe the items being monitored in the
-      logical model that is manipulated by the FogLAMP Manage.
+   logical model that is manipulated by the FogLAMP Manage.
 
 -  **Data Source -** Data Source Templates represent external sensors or
-      data collection devices.
+   data collection devices.
 
 -  **Integration -** Integration Templates model the systems north of
-      FogLAMP that receive the data from FogLAMP. This may be the cloud
-      services or the on premise data historians into which data is
-      processed from FogLAMP.
+   FogLAMP that receive the data from FogLAMP. This may be the cloud
+   services or the on premise data historians into which data is
+   processed from FogLAMP.
 
 -  **Connection -** Connection Templates describe how elements in the
-      logical model are connected together.
+   logical model are connected together.
 
 -  **Filter -** Filter Templates are a base template for defining a
-      single filter that can be applied to a Connection or embedded into
-      another entity. It defines the processing elements that may be
-      applied to the data as it traverses the connection.
+   single filter that can be applied to a Connection or embedded into
+   another entity. It defines the processing elements that may be
+   applied to the data as it traverses the connection.
 
 -  **Event Processor -** Event Processor Templates provide the template
-      for defining the rules to evaluate on the data and the mechanism
-      for delivering Event Processors when those rules trigger.
+   for defining the rules to evaluate on the data and the mechanism
+   for delivering Event Processors when those rules trigger.
 
 Asset Type Templates
 ~~~~~~~~~~~~~~~~~~~~
@@ -454,23 +454,17 @@ pump.
 Below depicts an example of what an Asset Template for a pump might look
 like.
 
-{
+.. code-block:: JSON
 
-"name": "Pump",
-
-"type": "Asset",
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "Pump",
+        "type": "Asset",
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 When creating an Asset using the "Pump" Template, you will see the
 following form:
@@ -490,23 +484,17 @@ Sources <#data-sources>`__ section.
 Data Source Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_DATASOURCE_NAME",
-
-"type": "DataSource",
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_DATASOURCE_NAME",
+        "type": "DataSource",
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 The core configuration elements in the definition of a Data Source
 Template are;
@@ -538,135 +526,73 @@ The defined software, or FogLAMP plugin, is foglamp-south-flirax8. The
 defined properties "address", "port", "slave", and "timeout" are the
 properties used to configure the foglamp-south-flirax8 software.
 
-{
-
-"name": "flirax8",
-
-"type": "DataSource",
-
-"software": [
-
-{
-
-"description": "A Modbus connected Flir AX8 thermal imaging camera",
-
-"package": "foglamp-south-flirax8",
-
-"plugin": "FlirAX8",
-
-"version": {
-
-"maximum": "1.9.1",
-
-"minimum": "1.0.0"
-
-}
-
-}
-
-],
-
-"properties": [
-
-{
-
-"default": "$Name$",
-
-"description": "Default asset name",
-
-"displayName": "Asset Name",
-
-"immutable": "false",
-
-"name": "asset",
-
-"order": "1",
-
-"type": "string"
-
-},
-
-{
-
-"default": "127.0.0.1",
-
-"description": "Address of Modbus TCP server",
-
-"displayName": "Server Address",
-
-"immutable": "false",
-
-"name": "address",
-
-"order": "3",
-
-"type": "string"
-
-},
-
-{
-
-"default": "502",
-
-"description": "Port of Modbus TCP server",
-
-"displayName": "Port",
-
-"immutable": "false",
-
-"name": "port",
-
-"order": "4",
-
-"type": "integer"
-
-},
-
-{
-
-"default": "1",
-
-"description": "The Modbus device default slave ID",
-
-"displayName": "Slave ID",
-
-"immutable": "false",
-
-"name": "slave",
-
-"order": "10",
-
-"type": "integer"
-
-},
-
-{
-
-"default": "0.5",
-
-"description": "Modbus request timeout",
-
-"displayName": "Timeout",
-
-"immutable": "false",
-
-"name": "timeout",
-
-"order": "12",
-
-"type": "float"
-
-}
-
-],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+.. code-block:: JSON
+
+    {
+        "name": "flirax8",
+        "type": "DataSource",
+        "software": [
+            {
+                "description": "A Modbus connected Flir AX8 thermal imaging camera",
+                "package": "foglamp-south-flirax8",
+                "plugin": "FlirAX8",
+                "version": {
+                    "maximum": "1.9.1",
+                    "minimum": "1.0.0"
+                }
+            }
+        ],
+        "properties": [
+            {
+                "default": "$Name$",
+                "description": "Default asset name",
+                "displayName": "Asset Name",
+                "immutable": "false",
+                "name": "asset",
+                "order": "1",
+                "type": "string"
+            },
+            {
+                "default": "127.0.0.1",
+                "description": "Address of Modbus TCP server",
+                "displayName": "Server Address",
+                "immutable": "false",
+                "name": "address",
+                "order": "3",
+                "type": "string"
+            },
+            {
+                "default": "502",
+                "description": "Port of Modbus TCP server",
+                "displayName": "Port",
+                "immutable": "false",
+                "name": "port",
+                "order": "4",
+                "type": "integer"
+            },
+            {
+                "default": "1",
+                "description": "The Modbus device default slave ID",
+                "displayName": "Slave ID",
+                "immutable": "false",
+                "name": "slave",
+                "order": "10",
+                "type": "integer"
+            },
+            {
+                "default": "0.5",
+                "description": "Modbus request timeout",
+                "displayName": "Timeout",
+                "immutable": "false",
+                "name": "timeout",
+                "order": "12",
+                "type": "float"
+            }
+        ],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 When creating a Data Source using the "flirax8" Template, you will see
 the following form:
@@ -705,31 +631,21 @@ Connection Template Skeletons
 Asset to Data Source
 ''''''''''''''''''''
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_CONNECTION_NAME",
-
-"type": "Connection",
-
-"srcType": "Asset",
-
-"validSrc": [],
-
-"dstType": "DataSource",
-
-"validDst": [],
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_CONNECTION_NAME",
+        "type": "Connection",
+        "srcType": "Asset",
+        "validSrc": [],
+        "dstType": "DataSource",
+        "validDst": [],
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 In addition to defining the eligible connections, the Connection
 Template also allows for definitions of:
@@ -746,29 +662,20 @@ linked sections.
 Asset to FogLAMP
 ''''''''''''''''
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_CONNECTION_NAME",
-
-"type": "Connection",
-
-"srcType": "Asset",
-
-"validSrc": [],
-
-"dstType": "FogLAMP",
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_CONNECTION_NAME",
+        "type": "Connection",
+        "srcType": "Asset",
+        "validSrc": [],
+        "dstType": "FogLAMP",
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 **Note:** "validDst" is omitted because the defined "dstType" is
 "FogLAMP".
@@ -788,29 +695,20 @@ linked sections.
 Data Source to FogLAMP
 ''''''''''''''''''''''
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_CONNECTION_NAME",
-
-"type": "Connection",
-
-"srcType": "DataSource",
-
-"validSrc": [],
-
-"dstType": "FogLAMP",
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_CONNECTION_NAME",
+        "type": "Connection",
+        "srcType": "DataSource",
+        "validSrc": [],
+        "dstType": "FogLAMP",
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 **Note:** "validDst" is omitted because the defined "dstType" is
 "FogLAMP".
@@ -830,29 +728,20 @@ linked sections.
 FogLAMP to Integration
 ''''''''''''''''''''''
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_CONNECTION_NAME",
-
-"type": "Connection",
-
-"srcType": "FogLAMP",
-
-"dstType": "Integration",
-
-"validDst": [],
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_CONNECTION_NAME",
+        "type": "Connection",
+        "srcType": "FogLAMP",
+        "dstType": "Integration",
+        "validDst": [],
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 **Note:** "validSrc" is omitted because the defined "srcType" is
 "FogLAMP".
@@ -884,39 +773,25 @@ FogLAMP the validSrc and validDst fields can be omitted.
 An example of a simple Connection Template which connects Flir AX8s to
 FogLAMPs:
 
-{
+.. code-block:: JSON
 
-"name" : "Flir AX8 to FogLAMP",
-
-"type" : "Connection",
-
-"srcType" : "Asset",
-
-"validSrc" : [ "flirax8" ],
-
-"dstType" : "FogLAMP",
-
-"filters" : [],
-
-"owner" : "System",
-
-"rights" : {
-
-"use" : true,
-
-"inherit" : true,
-
-"update" : false
-
-},
-
-"version" : "1.0.0",
-
-"software" : [],
-
-"properties" : []
-
-}
+    {
+        "name" : "Flir AX8 to FogLAMP",
+        "type" : "Connection",
+        "srcType" : "Asset",
+        "validSrc" : [ "flirax8" ],
+        "dstType" : "FogLAMP",
+        "filters" : [],
+        "owner" : "System",
+        "rights" : {
+        "use" : true,
+        "inherit" : true,
+        "update" : false
+        },
+        "version" : "1.0.0",
+        "software" : [],
+        "properties" : []
+    }
 
 Connection type templates can also define software requirements for both
 the source and destination entities, or just for the source or just for
@@ -943,73 +818,35 @@ ends of the connection, i.e. a superset of what is needed on the source
 and destination ends and are set in both. The properties have been
 omitted from the following example:
 
-{
+.. code-block:: JSON
 
-"name" : "Interconnection",
-
-"type" : "Connection",,
-
-"srcType" : "FogLAMP",
-
-"dstType" : "FogLAMP",
-
-"owner" : "System",
-
-"rights" : {
-
-"use" : true,
-
-"inherit" : true,
-
-"update" : false
-
-},
-
-"version" : "1.0.0",
-
-"software" : [
-
-{
-
-"package" : "foglamp-south-http",
-
-"version" : {
-
-"minimum" : "1.4.0",
-
-"maximum" : "1.7.0",
-
-},
-
-"qualifier" : "destination"
-
-},
-
-{
-
-"package" : "foglamp-north-http",
-
-"version" : {
-
-"minimum" : "1.4.0",
-
-"maximum" : "1.7.0",
-
-},
-
-"qualifier" : "source"
-
-}
-
-],
-
-"properties" : [
-
-...
-
-]
-
-}
+    {
+        "name" : "Interconnection",
+        "type" : "Connection",
+        "software" : [
+            {
+                "package" : "foglamp-south-http",
+                "version" : {
+                    "minimum" : "1.4.0",
+                    "maximum" : "1.7.0",
+                },
+                "qualifier" : "destination"
+            },
+            {
+                "package" : "foglamp-north-http",
+                "version" : {
+                    "minimum" : "1.4.0",
+                    "maximum" : "1.7.0",
+                },
+                "qualifier" : "source"
+            }
+        ],
+        "properties" : [],
+        "srcType" : "FogLAMP",
+        "dstType" : "FogLAMP",
+        "owner" : "System",
+        "rights" : {"use" : true, "inherit" : true, "update" : false}
+    }
 
 Integration Templates
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1024,23 +861,17 @@ Sources <#data-sources>`__ section.
 Integration Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_INTEGRATION_NAME",
-
-"type": "Integration",
-
-"software": [],
-
-"properties": [],
-
-"filters": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_INTEGRATION_NAME",
+        "type": "Integration",
+        "software": [],
+        "properties": [],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 The core configuration elements in the definition of an Integration
 Template are;
@@ -1057,116 +888,59 @@ linked sections.
 Examples
 ^^^^^^^^
 
-{
+.. code-block:: JSON
 
-"filters": [],
-
-"name": "kafka",
-
-"owner": "System",
-
-"properties": [
-
-{
-
-"default": "localhost:9092,kafka.local:9092",
-
-"description": "The bootstrap broker list to retrieve full Kafka
-brokers",
-
-"displayName": "Bootstrap Brokers",
-
-"immutable": "false",
-
-"name": "brokers",
-
-"order": "1",
-
-"type": "string"
-
-},
-
-{
-
-"default": "FogLAMP",
-
-"description": "The topic to send reading data on",
-
-"displayName": "Kafka Topic",
-
-"immutable": "false",
-
-"name": "topic",
-
-"order": "2",
-
-"type": "string"
-
-},
-
-{
-
-"default": "readings",
-
-"description": "The source of data to send",
-
-"displayName": "Data Source",
-
-"immutable": "false",
-
-"name": "source",
-
-"options": [
-
-"readings",
-
-"statistics"
-
-],
-
-"order": "3",
-
-"type": "enumeration"
-
-}
-
-],
-
-"rights": {
-
-"inherit": true,
-
-"update": false,
-
-"use": true
-
-},
-
-"software": [
-
-{
-
-"description": "Simple plugin to send data to a Kafka topic",
-
-"package": "foglamp-north-kafka",
-
-"plugin": "Kafka",
-
-"version": {
-
-"maximum": "1.9.1",
-
-"minimum": "1.0.0"
-
-}
-
-}
-
-],
-
-"type": "Integration"
-
-}
+    {
+        "name": "kafka",
+        "type": "Integration",
+        "software": [
+            {
+                "description": "Simple plugin to send data to a Kafka topic",
+                "package": "foglamp-north-kafka",
+                "plugin": "Kafka",
+                "version": {
+                    "maximum": "1.9.1",
+                    "minimum": "1.0.0"
+                }
+            }
+        ],
+        "properties": [
+            {
+                "default": "localhost:9092,kafka.local:9092",
+                "description": "The bootstrap broker list to retrieve full Kafka brokers",
+                "displayName": "Bootstrap Brokers",
+                "immutable": "false",
+                "name": "brokers",
+                "order": "1",
+                "type": "string"
+            },
+            {
+                "default": "FogLAMP",
+                "description": "The topic to send reading data on",
+                "displayName": "Kafka Topic",
+                "immutable": "false",
+                "name": "topic",
+                "order": "2",
+                "type": "string"
+            },
+            {
+                "default": "readings",
+                "description": "The source of data to send",
+                "displayName": "Data Source",
+                "immutable": "false",
+                "name": "source",
+                "options": [
+                    "readings",
+                    "statistics"
+                ],
+                "order": "3",
+                "type": "enumeration"
+            }
+        ],
+        "filters": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true},
+    }
 
 When creating an Integration using the "kafka" Template, you will see
 the following form:
@@ -1207,21 +981,16 @@ columns of the Flows page.
 Filter Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_FILTER_NAME",
-
-"type": "FILTER",
-
-"software": [],
-
-"properties": [],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": true, "use": true}
-
-}
+    {
+        "name": "YOUR_FILTER_NAME",
+        "type": "FILTER",
+        "software": [],
+        "properties": [],
+        "owner": "System",
+        "rights": {"inherit": true, "update": true, "use": true}
+    }
 
 The core configuration elements in the definition of an Integration
 Template are;
@@ -1244,106 +1013,55 @@ in Celsius rather than the default unit of Kelvin. We can define a
 Filter Template that can be incorporated into the Data Flows to perform
 this data conversion.
 
-{
+.. code-block:: JSON
 
-"name": "expression-filter",
-
-"owner": "System",
-
-"properties": [
-
-{
-
-"default": "false",
-
-"description": "A switch that can be used to enable or disable execution
-of the scale filter.",
-
-"displayName": "Enabled",
-
-"immutable": "false",
-
-"name": "enable",
-
-"order": "1",
-
-"type": "boolean"
-
-},
-
-{
-
-"default": "log(x)",
-
-"description": "Expression to apply",
-
-"displayName": "Expression to apply",
-
-"immutable": "false",
-
-"name": "expression",
-
-"order": "2",
-
-"type": "string"
-
-},
-
-{
-
-"default": "calculated",
-
-"description": "The name of the new data point",
-
-"displayName": "Datapoint Name",
-
-"immutable": "false",
-
-"name": "name",
-
-"order": "3",
-
-"type": "string"
-
-}
-
-],
-
-"rights": {
-
-"inherit": true,
-
-"update": false,
-
-"use": true
-
-},
-
-"software": [
-
-{
-
-"description": "Apply an expression to the data stream",
-
-"package": "foglamp-filter-expression",
-
-"plugin": "expression",
-
-"version": {
-
-"maximum": "1.9.1",
-
-"minimum": "1.4.0"
-
-}
-
-}
-
-],
-
-"type": "Filter"
-
-}
+    {
+        "name": "expression-filter",
+        "type": "Filter",
+        "software": [
+            {
+                "description": "Apply an expression to the data stream",
+                "package": "foglamp-filter-expression",
+                "plugin": "expression",
+                "version": {
+                    "maximum": "1.9.1",
+                    "minimum": "1.4.0"
+                }
+            }
+        ],
+        "properties": [
+            {
+                "default": "false",
+                "description": "A switch that can be used to enable or disable execution
+                of the scale filter.",
+                "displayName": "Enabled",
+                "immutable": "false",
+                "name": "enable",
+                "order": "1",
+                "type": "boolean"
+            },
+            {
+                "default": "log(x)",
+                "description": "Expression to apply",
+                "displayName": "Expression to apply",
+                "immutable": "false",
+                "name": "expression",
+                "order": "2",
+                "type": "string"
+            },
+            {
+                "default": "calculated",
+                "description": "The name of the new data point",
+                "displayName": "Datapoint Name",
+                "immutable": "false",
+                "name": "name",
+                "order": "3",
+                "type": "string"
+            }
+        ],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 When attaching an ad hoc Filter using the "expression-filter" Template,
 you will see the following form:
@@ -1370,41 +1088,26 @@ array rather than a single object.
 Event Processor Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-{
+.. code-block:: JSON
 
-"name": "YOUR_EVENT_PROCESSOR_NAME",
-
-"type": "Notification",
-
-"software": [],
-
-"rule": {
-
-"plugin": "RULE_PLUGIN_NAME",
-
-"properties": []
-
-},
-
-"delivery": [
-
-{
-
-"plugin": "DELIVERY_PLUGIN_NAME",
-
-"properties": []
-
-}
-
-],
-
-"owner": "System",
-
-"properties": [],
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+    {
+        "name": "YOUR_EVENT_PROCESSOR_NAME",
+        "type": "Notification",
+        "software": [],
+        "properties": [],
+        "rule": {
+            "plugin": "RULE_PLUGIN_NAME",
+            "properties": []
+        },
+        "delivery": [
+            {
+                "plugin": "DELIVERY_PLUGIN_NAME",
+                "properties": []
+            }
+        ],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 .. _example-4:
 
@@ -1421,482 +1124,250 @@ In all, this Event Processor will monitor a data point, if it ever
 exceeds the configured threshold value, it will send out an email to the
 configured address.
 
-{
-
-"name": "Threshold to Email",
-
-"type": "Notification",
-
-"software": [
-
-{
-
-"description": "Generate a notification when datapoint value crosses a
-boundary.",
-
-"package": "",
-
-"plugin": "Threshold",
-
-"version": {
-
-"maximum": "1.0.0",
-
-"minimum": "0.0.0"
-
-}
-
-},
-
-{
-
-"description": "Email notification plugin",
-
-"package": "foglamp-notify-email",
-
-"plugin": "email",
-
-"version": {
-
-"maximum": "1.9.1",
-
-"minimum": "0.0.0"
-
-}
-
-}
-
-],
-
-"properties": [
-
-{
-
-"default": "true",
-
-"description": "A switch that can be used to enable or disable the
-notification",
-
-"displayName": "Enabled",
-
-"immutable": "false",
-
-"name": "enable",
-
-"order": "1",
-
-"type": "boolean"
-
-},
-
-{
-
-"default": "one shot",
-
-"description": "Type of notification",
-
-"displayName": "Type",
-
-"immutable": "false",
-
-"name": "notification_type",
-
-"options": "[ \\"one shot\", \\"retriggered\", \\"toggled\" ]",
-
-"order": "2",
-
-"type": "enumeration"
-
-},
-
-{
-
-"default": "60",
-
-"description": "Retrigger time in seconds for sending a new
-notification",
-
-"displayName": "Retrigger Time",
-
-"immutable": "false",
-
-"name": "retrigger_time",
-
-"order": "3",
-
-"type": "integer"
-
-}
-
-],
-
-"rule": {
-
-"plugin": "Threshold",
-
-"properties": [
-
-{
-
-"default": "",
-
-"description": "The asset name for which notifications will be
-generated.",
-
-"displayName": "Asset name",
-
-"immutable": "false",
-
-"name": "asset",
-
-"order": "1",
-
-"type": "string"
-
-},
-
-{
-
-"default": "",
-
-"description": "The datapoint within the asset name for which
-notifications will be generated.",
-
-"displayName": "Datapoint name",
-
-"immutable": "false",
-
-"name": "datapoint",
-
-"order": "2",
-
-"type": "string"
-
-},
-
-{
-
-"default": ">",
-
-"description": "The condition to evaluate",
-
-"displayName": "Condition",
-
-"immutable": "false",
-
-"name": "condition",
-
-"options": "[\">\", \\">=\", \\"<\", \\"<=\"]",
-
-"order": "3",
-
-"type": "enumeration"
-
-},
-
-{
-
-"default": "0.0",
-
-"description": "Value at which to trigger a notification.",
-
-"displayName": "Trigger value",
-
-"immutable": "false",
-
-"name": "trigger_value",
-
-"order": "4",
-
-"type": "float"
-
-},
-
-{
-
-"default": "Single Item",
-
-"description": "The rule evaluation data: single item or window",
-
-"displayName": "Evaluation data",
-
-"immutable": "false",
-
-"name": "evaluation_data",
-
-"options": "[\"Single Item\", \\"Window\"]",
-
-"order": "5",
-
-"type": "enumeration"
-
-},
-
-{
-
-"default": "Average",
-
-"description": "Window data evaluation type",
-
-"displayName": "Window evaluation",
-
-"immutable": "false",
-
-"name": "window_data",
-
-"options": "[\"Maximum\", \\"Minimum\", \\"Average\"]",
-
-"order": "6",
-
-"type": "enumeration",
-
-"validity": "evaluation_data != \\"Single Item\""
-
-},
-
-{
-
-"default": "30",
-
-"description": "Duration of the time window, in seconds, for collecting
-data points",
-
-"displayName": "Time window",
-
-"immutable": "false",
-
-"name": "time_window",
-
-"order": "7",
-
-"type": "integer",
-
-"validity": "evaluation_data != \\"Single Item\""
-
-}
-
-]
-
-},
-
-"delivery": [
-
-{
-
-"plugin": "email",
-
-"properties": [
-
-{
-
-"default": "alert.subscriber@dianomic.com",
-
-"description": "The address to send the alert to",
-
-"displayName": "To address",
-
-"immutable": "false",
-
-"name": "email_to",
-
-"order": "1",
-
-"type": "string"
-
-},
-
-{
-
-"default": "Notification alert subscriber",
-
-"description": "The name to send the alert to",
-
-"displayName": "To ",
-
-"immutable": "false",
-
-"name": "email_to_name",
-
-"order": "2",
-
-"type": "string"
-
-},
-
-{
-
-"default": "FogLAMP alert notification",
-
-"description": "The email subject",
-
-"displayName": "Subject",
-
-"immutable": "false",
-
-"name": "subject",
-
-"order": "3",
-
-"type": "string"
-
-},
-
-{
-
-"default": "dianomic.alerts@gmail.com",
-
-"description": "The address the email will come from",
-
-"displayName": "From address",
-
-"immutable": "false",
-
-"name": "email_from",
-
-"order": "4",
-
-"type": "string"
-
-},
-
-{
-
-"default": "Notification alert",
-
-"description": "The name used to send the alert email",
-
-"displayName": "From name",
-
-"immutable": "false",
-
-"name": "email_from_name",
-
-"order": "5",
-
-"type": "string"
-
-},
-
-{
-
-"default": "smtp.gmail.com",
-
-"description": "The SMTP server name/address",
-
-"displayName": "SMTP Server",
-
-"immutable": "false",
-
-"name": "server",
-
-"order": "6",
-
-"type": "string"
-
-},
-
-{
-
-"default": "587",
-
-"description": "The SMTP server port",
-
-"displayName": "SMTP Port",
-
-"immutable": "false",
-
-"name": "port",
-
-"order": "7",
-
-"type": "integer"
-
-},
-
-{
-
-"default": "true",
-
-"description": "Use SSL/TLS for email transfer",
-
-"displayName": "SSL/TLS",
-
-"immutable": "false",
-
-"name": "use_ssl_tls",
-
-"order": "8",
-
-"type": "boolean"
-
-},
-
-{
-
-"default": "dianomic.alerts@gmail.com",
-
-"description": "Email account name",
-
-"displayName": "Username",
-
-"immutable": "false",
-
-"name": "username",
-
-"order": "9",
-
-"type": "string"
-
-},
-
-{
-
-"default": "pass",
-
-"description": "Email account password",
-
-"displayName": "Password",
-
-"immutable": "false",
-
-"name": "password",
-
-"order": "10",
-
-"type": "string"
-
-},
-
-{
-
-"default": "false",
-
-"description": "A switch that can be used to enable or disable execution
-of the email notification plugin.",
-
-"displayName": "Enabled",
-
-"immutable": "false",
-
-"name": "enable",
-
-"order": "11",
-
-"type": "boolean"
-
-}
-
-]
-
-}
-
-],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+.. code-block:: JSON
+
+    {
+        "name": "Threshold to Email",
+        "type": "Notification",
+        "software": [
+            {
+                "description": "Generate a notification when datapoint value crosses a
+                boundary.",
+                "package": "",
+                "plugin": "Threshold",
+                "version": {
+                    "maximum": "1.0.0",
+                    "minimum": "0.0.0"
+                }
+            },
+            {
+                "description": "Email notification plugin",
+                "package": "foglamp-notify-email",
+                "plugin": "email",
+                "version": {
+                    "maximum": "1.9.1",
+                    "minimum": "0.0.0"
+                    }
+            }
+        ],
+        "properties": [
+            {
+                "default": "true",
+                "description": "A switch that can be used to enable or disable the
+                notification",
+                "displayName": "Enabled",
+                "immutable": "false",
+                "name": "enable",
+                "order": "1",
+                "type": "boolean"
+            },
+            {
+                "default": "one shot",
+                "description": "Type of notification",
+                "displayName": "Type",
+                "immutable": "false",
+                "name": "notification_type",
+                "options": "[ \\"one shot\", \\"retriggered\", \\"toggled\" ]",
+                "order": "2",
+                "type": "enumeration"
+            },
+            {
+                "default": "60",
+                "description": "Retrigger time in seconds for sending a new
+                notification",
+                "displayName": "Retrigger Time",
+                "immutable": "false",
+                "name": "retrigger_time",
+                "order": "3",
+                "type": "integer"
+            }
+        ],
+        "rule": {
+            "plugin": "Threshold",
+            "properties": [
+                {
+                    "default": "",
+                    "description": "The asset name for which notifications will be
+                    generated.",
+                    "displayName": "Asset name",
+                    "immutable": "false",
+                    "name": "asset",
+                    "order": "1",
+                    "type": "string"
+                },
+                {
+                    "default": "",
+                    "description": "The datapoint within the asset name for which
+                    notifications will be generated.",
+                    "displayName": "Datapoint name",
+                    "immutable": "false",
+                    "name": "datapoint",
+                    "order": "2",
+                    "type": "string"
+                },
+                {
+                    "default": ">",
+                    "description": "The condition to evaluate",
+                    "displayName": "Condition",
+                    "immutable": "false",
+                    "name": "condition",
+                    "options": "[\">\", \\">=\", \\"<\", \\"<=\"]",
+                    "order": "3",
+                    "type": "enumeration"
+                },
+                {
+                    "default": "0.0",
+                    "description": "Value at which to trigger a notification.",
+                    "displayName": "Trigger value",
+                    "immutable": "false",
+                    "name": "trigger_value",
+                    "order": "4",
+                    "type": "float"
+                },
+                {
+                    "default": "Single Item",
+                    "description": "The rule evaluation data: single item or window",
+                    "displayName": "Evaluation data",
+                    "immutable": "false",
+                    "name": "evaluation_data",
+                    "options": "[\"Single Item\", \\"Window\"]",
+                    "order": "5",
+                    "type": "enumeration"
+                },
+                {
+                    "default": "Average",
+                    "description": "Window data evaluation type",
+                    "displayName": "Window evaluation",
+                    "immutable": "false",
+                    "name": "window_data",
+                    "options": "[\"Maximum\", \\"Minimum\", \\"Average\"]",
+                    "order": "6",
+                    "type": "enumeration",
+                    "validity": "evaluation_data != \\"Single Item\""
+                },
+                {
+                    "default": "30",
+                    "description": "Duration of the time window, in seconds, for collecting
+                    data points",
+                    "displayName": "Time window",
+                    "immutable": "false",
+                    "name": "time_window",
+                    "order": "7",
+                    "type": "integer",
+                    "validity": "evaluation_data != \\"Single Item\""
+                }
+            ]
+        },
+        "delivery": [
+            {
+                "plugin": "email",
+                "properties": [
+                    {
+                        "default": "alert.subscriber@dianomic.com",
+                        "description": "The address to send the alert to",
+                        "displayName": "To address",
+                        "immutable": "false",
+                        "name": "email_to",
+                        "order": "1",
+                        "type": "string"
+                    },
+                    {
+                        "default": "Notification alert subscriber",
+                        "description": "The name to send the alert to",
+                        "displayName": "To ",
+                        "immutable": "false",
+                        "name": "email_to_name",
+                        "order": "2",
+                        "type": "string"
+                    },
+                    {
+                        "default": "FogLAMP alert notification",
+                        "description": "The email subject",
+                        "displayName": "Subject",
+                        "immutable": "false",
+                        "name": "subject",
+                        "order": "3",
+                        "type": "string"
+                    },
+                    {
+                        "default": "dianomic.alerts@gmail.com",
+                        "description": "The address the email will come from",
+                        "displayName": "From address",
+                        "immutable": "false",
+                        "name": "email_from",
+                        "order": "4",
+                        "type": "string"
+                    },
+                    {
+                        "default": "Notification alert",
+                        "description": "The name used to send the alert email",
+                        "displayName": "From name",
+                        "immutable": "false",
+                        "name": "email_from_name",
+                        "order": "5",
+                        "type": "string"
+                    },
+                    {
+                        "default": "smtp.gmail.com",
+                        "description": "The SMTP server name/address",
+                        "displayName": "SMTP Server",
+                        "immutable": "false",
+                        "name": "server",
+                        "order": "6",
+                        "type": "string"
+                    },
+                    {
+                        "default": "587",
+                        "description": "The SMTP server port",
+                        "displayName": "SMTP Port",
+                        "immutable": "false",
+                        "name": "port",
+                        "order": "7",
+                        "type": "integer"
+                    },
+                    {
+                        "default": "true",
+                        "description": "Use SSL/TLS for email transfer",
+                        "displayName": "SSL/TLS",
+                        "immutable": "false",
+                        "name": "use_ssl_tls",
+                        "order": "8",
+                        "type": "boolean"
+                    },
+                    {
+                        "default": "dianomic.alerts@gmail.com",
+                        "description": "Email account name",
+                        "displayName": "Username",
+                        "immutable": "false",
+                        "name": "username",
+                        "order": "9",
+                        "type": "string"
+                    },
+                    {
+                        "default": "pass",
+                        "description": "Email account password",
+                        "displayName": "Password",
+                        "immutable": "false",
+                        "name": "password",
+                        "order": "10",
+                        "type": "string"
+                    },
+                    {
+                        "default": "false",
+                        "description": "A switch that can be used to enable or disable execution
+                        of the email notification plugin.",
+                        "displayName": "Enabled",
+                        "immutable": "false",
+                        "name": "enable",
+                        "order": "11",
+                        "type": "boolean"
+                    }
+                ]
+            }
+        ],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 When creating an Event Processor using the "Threshold to Email"
 Template, you will see the following form:
@@ -1924,23 +1395,17 @@ Defining Software in a Template
 
 The skeleton for the definition of one piece of software is shown below:
 
-{
+.. code-block:: JSON
 
-"plugin": "",
-
-"package": "",
-
-"description": "",
-
-"version": {
-
-"maximum": "",
-
-"minimum": ""
-
-}
-
-}
+    {
+        "plugin": "",
+        "package": "",
+        "description": "",
+        "version": {
+            "maximum": "",
+            "minimum": ""
+        }
+    }
 
 How to configure the elements of a "software" definition:
 
@@ -1972,67 +1437,44 @@ How to configure the elements of a "software" definition:
 An example "software" definition for the sinusoid plugin using the
 details from the examples above:
 
-{
+.. code-block:: JSON
 
-"plugin": "sinusoid",
-
-"package": "foglamp-south-sinusoid",
-
-"description": "Sinusoid Poll Plugin which implements sine wave with
-data points",
-
-"version": {
-
-"maximum": "2.0.0",
-
-"minimum": "1.0.0"
-
-}
-
-}
+    {
+        "plugin": "sinusoid",
+        "package": "foglamp-south-sinusoid",
+        "description": "Sinusoid Poll Plugin which implements sine wave with
+        data points",
+        "version": {
+            "maximum": "2.0.0",
+            "minimum": "1.0.0"
+        }
+    }
 
 Additionally, as shown below, the "software" element of a Template
 supports the definition of multiple softwares:
 
-"software": [
+.. code-block:: JSON
 
-{
-
-"plugin": "",
-
-"package": "",
-
-"description": "",
-
-"version": {
-
-"maximum": "",
-
-"minimum": ""
-
-}
-
-},
-
-{
-
-"plugin": "",
-
-"package": "",
-
-"description": "",
-
-"version": {
-
-"maximum": "",
-
-"minimum": ""
-
-}
-
-}
-
-]
+    "software": [
+        {
+            "plugin": "",
+            "package": "",
+            "description": "",
+            "version": {
+                "maximum": "",
+                "minimum": ""
+            }
+        },
+        {
+            "plugin": "",
+            "package": "",
+            "description": "",
+            "version": {
+                "maximum": "",
+                "minimum": ""
+            }
+        }
+    ]
 
 Template Properties
 -------------------
@@ -2047,25 +1489,18 @@ Defining Properties in a Template
 
 The skeleton for the definition of property is shown below:
 
-{
+.. code-block:: JSON
 
-"name": "",
-
-"type": "",
-
-"displayName": "",
-
-"description": "",
-
-"default": "",
-
-"immutable": "",
-
-"options": "[]",
-
-"order": ""
-
-}
+    {
+        "name": "",
+        "type": "",
+        "displayName": "",
+        "description": "",
+        "default": "",
+        "immutable": "",
+        "options": "[]",
+        "order": ""
+    }
 
 How to configure the elements of a "properties" definition:
 
@@ -2160,67 +1595,41 @@ How to configure the elements of a "properties" definition:
 An example "properties" definition using the details from the examples
 above:
 
-| "properties": [
-| {
+.. code-block:: JSON
 
-"name": "stringInput",
-
-"type": "string",
-
-"displayName": "String Input",
-
-"description": "Provide the string value that should be used to
-configure the software",
-
-"default": "Default String",
-
-"immutable": "false",
-
-"order": "1"
-
-},
-
-{
-
-"name": "optionsInput",
-
-"type": "enumeration",
-
-"displayName": "Options Input",
-
-"description": "Provide the option that should be used to configure the
-software",
-
-"default": "Option 1",
-
-"immutable": "false",
-
-"options": "[ \\"Option 1\", \\"Option 2\", \\"Option 3\" ]",
-
-"order": "0"
-
-},
-
-{
-
-"name": "integerInput",
-
-"type": "integer",
-
-"displayName": "Integer Input",
-
-"description": "The immutable integer value that is used to configure
-the software",
-
-"default": "100",
-
-"immutable": "true",
-
-"order": "2"
-
-}
-
-]
+    "properties": [
+        {
+            "name": "stringInput",
+            "type": "string",
+            "displayName": "String Input",
+            "description": "Provide the string value that should be used to
+            configure the software",
+            "default": "Default String",
+            "immutable": "false",
+            "order": "1"
+        },
+        {
+            "name": "optionsInput",
+            "type": "enumeration",
+            "displayName": "Options Input",
+            "description": "Provide the option that should be used to configure the
+            software",
+            "default": "Option 1",
+            "immutable": "false",
+            "options": "[ \\"Option 1\", \\"Option 2\", \\"Option 3\" ]",
+            "order": "0"
+        },
+        {
+            "name": "integerInput",
+            "type": "integer",
+            "displayName": "Integer Input",
+            "description": "The immutable integer value that is used to configure
+            the software",
+            "default": "100",
+            "immutable": "true",
+            "order": "2"
+        }
+    ]
 
 When adding an entity using a Template with the properties defined
 above, the entities configuration page will look as shown below:
@@ -2389,119 +1798,70 @@ that ships with FogLAMP Manage into an Asset Template.
 
 The Asset Template:
 
-{
+.. code-block:: JSON
 
-"name": "generic asset with embedded filter",
-
-"type": "Asset",
-
-"software": [],
-
-"properties": [],
-
-"filters": [“expression-filter”],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+    {
+        "name": "generic asset with embedded filter",
+        "type": "Asset",
+        "software": [],
+        "properties": [],
+        "filters": [“expression-filter”],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 The “expression-filter” Template that is embedded in the Asset Template
 above:
 
-{
+.. code-block:: JSON
 
-"name": "expression-filter",
-
-"type": "Filter",
-
-"software": [
-
-{
-
-"description": "Apply an expression to the data stream",
-
-"package": "foglamp-filter-expression",
-
-"plugin": "expression",
-
-"version": {
-
-"maximum": "1.9.1",
-
-"minimum": "1.4.0"
-
-}
-
-}
-
-],
-
-"properties": [
-
-{
-
-"default": "false",
-
-"description": "A switch that can be used to enable or disable execution
-of the scale filter.",
-
-"displayName": "Enabled",
-
-"immutable": "false",
-
-"name": "enable",
-
-"order": "1",
-
-"type": "boolean"
-
-},
-
-{
-
-"default": "log(x)",
-
-"description": "Expression to apply",
-
-"displayName": "Expression to apply",
-
-"immutable": "false",
-
-"name": "expression",
-
-"order": "2",
-
-"type": "string"
-
-},
-
-{
-
-"default": "calculated",
-
-"description": "The name of the new data point",
-
-"displayName": "Datapoint Name",
-
-"immutable": "false",
-
-"name": "name",
-
-"order": "3",
-
-"type": "string"
-
-}
-
-],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+    {
+        "name": "expression-filter",
+        "type": "Filter",
+        "software": [
+            {
+                "description": "Apply an expression to the data stream",
+                "package": "foglamp-filter-expression",
+                "plugin": "expression",
+                "version": {
+                    "maximum": "1.9.1",
+                    "minimum": "1.4.0"
+                }
+            }
+        ],
+        "properties": [
+            {
+                "default": "false",
+                "description": "A switch that can be used to enable or disable execution
+                of the scale filter.",
+                "displayName": "Enabled",
+                "immutable": "false",
+                "name": "enable",
+                "order": "1",
+                "type": "boolean"
+            },
+            {
+                "default": "log(x)",
+                "description": "Expression to apply",
+                "displayName": "Expression to apply",
+                "immutable": "false",
+                "name": "expression",
+                "order": "2",
+                "type": "string"
+            },
+            {
+                "default": "calculated",
+                "description": "The name of the new data point",
+                "displayName": "Datapoint Name",
+                "immutable": "false",
+                "name": "name",
+                "order": "3",
+                "type": "string"
+            }
+        ],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 **Note:** The “expression-filter” Template has 3 properties: “enable”,
 “expression”, and “name”.
@@ -2523,23 +1883,17 @@ Multiple Filters can easily be defined in the “filters” property to form
 a Filters pipeline. Here we will edit the Asset template defined in the
 first example to include two instances of the “expression-filter”.
 
-{
+.. code-block:: JSON
 
-"name": "generic asset with embedded filter",
-
-"type": "Asset",
-
-"software": [],
-
-"properties": [],
-
-"filters": [“expression-filter”, “expression-filter”],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+    {
+        "name": "generic asset with embedded filter",
+        "type": "Asset",
+        "software": [],
+        "properties": [],
+        "filters": [“expression-filter”, “expression-filter”],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 Now when we create an instance of this Asset, we will be prompted with
 the properties required to configure both Filters. And when the Asset
@@ -2560,96 +1914,54 @@ provide any Filter related properties when the entity is created.
 Here we modify the “expression-filter” used in the above examples to
 only have immutable properties.
 
-"name": "expression-filter",
-
-"type": "Filter",
-
-"software": [
-
-{
-
-"description": "Apply an expression to the data stream",
-
-"package": "foglamp-filter-expression",
-
-"plugin": "expression",
-
-"version": {
-
-"maximum": "1.9.1",
-
-"minimum": "1.4.0"
-
-}
-
-}
-
-],
-
-"properties": [
-
-{
-
-"default": "true",
-
-"description": "A switch that can be used to enable or disable execution
-of the scale filter.",
-
-"displayName": "Enabled",
-
-"immutable": "true",
-
-"name": "enable",
-
-"order": "1",
-
-"type": "boolean"
-
-},
-
-{
-
-"default": "sin(x)",
-
-"description": "Expression to apply",
-
-"displayName": "Expression to apply",
-
-"immutable": "true",
-
-"name": "expression",
-
-"order": "2",
-
-"type": "string"
-
-},
-
-{
-
-"default": "calculated",
-
-"description": "The name of the new data point",
-
-"displayName": "Datapoint Name",
-
-"immutable": "true",
-
-"name": "name",
-
-"order": "3",
-
-"type": "string"
-
-}
-
-],
-
-"owner": "System",
-
-"rights": {"inherit": true, "update": false, "use": true}
-
-}
+.. code-block:: JSON
+    {
+        "name": "expression-filter",
+        "type": "Filter",
+        "software": [
+            {
+                "description": "Apply an expression to the data stream",
+                "package": "foglamp-filter-expression",
+                "plugin": "expression",
+                "version": {
+                    "maximum": "1.9.1",
+                    "minimum": "1.4.0"
+                }
+            }
+        ],
+        "properties": [
+            {
+                "default": "true",
+                "description": "A switch that can be used to enable or disable execution
+                of the scale filter.",
+                "displayName": "Enabled",
+                "immutable": "true",
+                "name": "enable",
+                "order": "1",
+                "type": "boolean"
+            },
+            {
+                "default": "sin(x)",
+                "description": "Expression to apply",
+                "displayName": "Expression to apply",
+                "immutable": "true",
+                "name": "expression",
+                "order": "2",
+                "type": "string"
+            },
+            {
+                "default": "calculated",
+                "description": "The name of the new data point",
+                "displayName": "Datapoint Name",
+                "immutable": "true",
+                "name": "name",
+                "order": "3",
+                "type": "string"
+            }
+        ],
+        "owner": "System",
+        "rights": {"inherit": true, "update": false, "use": true}
+    }
 
 Creating an instance of the Asset now shows us the following form:
 
