@@ -236,23 +236,23 @@ Elements of a Template
 |                 |                 | package         |                 |
 |                 |                 | required.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].plugin | string          | The plugin name | HTTP-South      |
-|                 |                 | of the plugin   |                 |
+| software[].plu\ | string          | The plugin name | HTTP-South      |
+| gin             |                 | of the plugin   |                 |
 |                 |                 | to use.         |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].version | Object          | The version     |                 |
-|                 |                 | constraints for |                 |
+| software[].ver\ | Object          | The version     |                 |
+| sion            |                 | constraints for |                 |
 |                 |                 | the software    |                 |
 |                 |                 | package.        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].version.minimum | string          | The minimum     | 1.0.3           |
-|                 |                 | version of the  |                 |
+| software[].ver\ | string          | The minimum     | 1.0.3           |
+| sion.minimum    |                 | version of the  |                 |
 |                 |                 | package that    |                 |
 |                 |                 | this template   |                 |
 |                 |                 | requires.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].version.maximum | string          | An optional     | 1.5.2           |
-|                 |                 | maximum version |                 |
+| software[].ver\ | string          | An optional     | 1.5.2           |
+| sion.maximum    |                 | maximum version |                 |
 |                 |                 | that this       |                 |
 |                 |                 | template        |                 |
 |                 |                 | requires for    |                 |
@@ -271,8 +271,8 @@ Elements of a Template
 |                 |                 | defined as the  |                 |
 |                 |                 | minimum.        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| software[].qualifier | string          | Optional. Used  | source          |
-|                 |                 | for connector   |                 |
+| software[].qua\ | string          | Optional. Used  | source          |
+| lifier          |                 | for connector   |                 |
 |                 |                 | type templates  |                 |
 |                 |                 | to indicate if  |                 |
 |                 |                 | the software is |                 |
@@ -288,11 +288,11 @@ Elements of a Template
 |                 |                 | -in-a-template> |                 |
 |                 |                 | `__             |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].name | string          | The name of the | assetPrefix     |
-|                 |                 | property        |                 |
+| properties[].n\ | string          | The name of the | assetPrefix     |
+| ame             |                 | property        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].type | string          | Type type of    | string          |
-|                 |                 | the property.   |                 |
+| properties[].t\ | string          | Type type of    | string          |
+| ype             |                 | the property.   |                 |
 |                 |                 | This may be any |                 |
 |                 |                 | of the types    |                 |
 |                 |                 | defined in      |                 |
@@ -307,8 +307,8 @@ Elements of a Template
 |                 |                 | Types <#propert |                 |
 |                 |                 | y-types>`__     |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].default | string          | The default     | http            |
-|                 |                 | value of the    |                 |
+| properties[].d\ | string          | The default     | http            |
+| efault          |                 | value of the    |                 |
 |                 |                 | property. Note  |                 |
 |                 |                 | that templates  |                 |
 |                 |                 | never define    |                 |
@@ -329,20 +329,20 @@ Elements of a Template
 |                 |                 | works within    |                 |
 |                 |                 | templates.      |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].displayName | string          | A human         | Asset Name      |
-|                 |                 | readable        | Prefix          |
+| properties[].d\ | string          | A human         | Asset Name      |
+| isplayName      |                 | readable        | Prefix          |
 |                 |                 | display name    |                 |
 |                 |                 | for use in user |                 |
 |                 |                 | interfaces.     |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].description | string          | A human         | The Asset Name  |
-|                 |                 | readable        | to use for data |
+| properties[].d\ | string          | A human         | The Asset Name  |
+| escription      |                 | readable        | to use for data |
 |                 |                 | description of  | ingested on     |
 |                 |                 | the property.   | this            |
 |                 |                 |                 | connection.     |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].options | Array           | Only used if    | ["Option 1",    |
-|                 |                 | properties.type | "Option 2"]     |
+| properties[].o\ | Array           | Only used if    | ["Option 1",    |
+| ptions          |                 | properties.type | "Option 2"]     |
 |                 |                 | is enumeration. |                 |
 |                 |                 | A list of the   |                 |
 |                 |                 | options that    |                 |
@@ -350,13 +350,13 @@ Elements of a Template
 |                 |                 | in the dropdown |                 |
 |                 |                 | menu.           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].order | integer         | An order to use | 2               |
-|                 |                 | when building a |                 |
+| properties[].o\ | integer         | An order to use | 2               |
+| rder            |                 | when building a |                 |
 |                 |                 | UI to display   |                 |
 |                 |                 | the properties. |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].immutable | boolean         | A flag that can | false           |
-|                 |                 | prevent users   |                 |
+| properties[].i\ | boolean         | A flag that can | false           |
+| mmutable        |                 | prevent users   |                 |
 |                 |                 | of the template |                 |
 |                 |                 | from entering   |                 |
 |                 |                 | values other    |                 |
@@ -365,8 +365,8 @@ Elements of a Template
 |                 |                 | in this         |                 |
 |                 |                 | template.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| properties[].qu | string          | Used in         | destination     |
-| alifier         |                 | connection type |                 |
+| properties[].q\ | string          | Used in         | destination     |
+| ualifier        |                 | connection type |                 |
 |                 |                 | templates to    |                 |
 |                 |                 | allow the       |                 |
 |                 |                 | property to be  |                 |
@@ -419,6 +419,7 @@ Asset Template Skeleton
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: JSON
+
     {
         "name": "YOUR_ASSET_NAME",
         "type": "Asset",
